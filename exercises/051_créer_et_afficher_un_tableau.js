@@ -33,3 +33,8 @@ let languages = ["JavaScript", "Python", "Java", "C++", "Ruby"];
 console.log(languages);
 console.log("Nombre de langages: " + languages.length);
 
+// ==================== NON_TESTABLE ====================
+// This exercise is about creating arrays and console output only.
+
+module.exports.NON_TESTABLE = 'Console output only, no testable return value';
+

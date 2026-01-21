@@ -59,3 +59,18 @@ const afficherProduit = (nom, prix, stock) => {
 console.log(calculerPrixTTC(100, 0.20));
 console.log(afficherProduit("Laptop", 999, 5));
 console.log(afficherProduit("Clavier", 49, 0));
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 073: Convertir en ES6 - calculerPrixTTC', [
+        { input: [100, 0.20], expected: 'Prix HT: 100€, TVA: 20€, Prix TTC: 120€', description: 'Price calculation with 20% tax' }
+    ], calculerPrixTTC);
+    
+    test.run('Exercise 073: Convertir en ES6 - afficherProduit', [
+        { input: ['Laptop', 999, 5], expected: 'Produit: Laptop - Prix: 999€ - En stock: 5', description: 'Product in stock' },
+        { input: ['Clavier', 49, 0], expected: 'Produit: Clavier - Rupture de stock', description: 'Product out of stock' }
+    ], afficherProduit);
+}

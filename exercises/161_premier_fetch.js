@@ -59,4 +59,10 @@ const recupererDonnees = async (url) => {
 const URL = 'https://jsonplaceholder.typicode.com/users';
 recupererDonnees(URL);
 
+// ==================== NON_TESTABLE ====================
+// This exercise requires the fetch API and network requests.
+// Must be tested in a browser or with fetch polyfill.
+
+module.exports.NON_TESTABLE = 'Requires fetch API and network - browser only';
+
 

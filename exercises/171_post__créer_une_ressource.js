@@ -64,3 +64,9 @@ const nouvelleDonnee = {
 };
 
 creerRessource(nouvelleDonnee);
+
+// ==================== NON_TESTABLE ====================
+// This exercise requires the fetch API and network POST requests.
+// Must be tested in a browser or with fetch polyfill.
+
+module.exports.NON_TESTABLE = 'Requires fetch API and network - browser only';

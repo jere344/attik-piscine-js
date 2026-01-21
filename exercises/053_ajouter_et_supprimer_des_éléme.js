@@ -42,3 +42,8 @@ languages.pop();
 console.log("Après pop: " + JSON.stringify(languages));
 languages.unshift("TypeScript");
 console.log("Après unshift: " + JSON.stringify(languages));
+
+// ==================== NON_TESTABLE ====================
+// This exercise demonstrates array manipulation with console output only.
+
+module.exports.NON_TESTABLE = 'Console output only, no testable return value';

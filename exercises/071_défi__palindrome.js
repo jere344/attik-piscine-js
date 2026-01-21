@@ -49,5 +49,19 @@ isPalindrome("radar")
 
 // Your code here
 
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 071: Défi - Palindrome', [
+        { input: 'radar', expected: true, description: 'Simple palindrome' },
+        { input: 'hello', expected: false, description: 'Not a palindrome' },
+        { input: 'Kayak', expected: true, description: 'Case insensitive palindrome' },
+        { input: 'Level', expected: true, description: 'Another case insensitive' },
+        { input: 'abc', expected: false, description: 'Not palindrome' }
+    ], isPalindrome);
+}
+
 
 

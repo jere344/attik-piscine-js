@@ -53,3 +53,17 @@ console.log(calculator(10, '-', 5));
 console.log(calculator(10, '*', 5));
 console.log(calculator(10, '/', 5));
 console.log(calculator(10, '%', 3));
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 003: Calculatrice simple', [
+        { input: [10, '+', 5], expected: 15, description: 'Addition' },
+        { input: [10, '-', 5], expected: 5, description: 'Subtraction' },
+        { input: [10, '*', 5], expected: 50, description: 'Multiplication' },
+        { input: [10, '/', 5], expected: 2, description: 'Division' },
+        { input: [10, '%', 3], expected: 'Opérateur invalide', description: 'Invalid operator' }
+    ], calculator);
+}

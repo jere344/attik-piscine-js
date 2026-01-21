@@ -44,3 +44,16 @@ function factorial(n) {
 console.log(factorial(5));
 console.log(factorial(0));
 console.log(factorial(7));
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 033: Factorielle', [
+        { input: 5, expected: 120, description: '5! = 120' },
+        { input: 0, expected: 1, description: '0! = 1' },
+        { input: 1, expected: 1, description: '1! = 1' },
+        { input: 7, expected: 5040, description: '7! = 5040' }
+    ], factorial);
+}

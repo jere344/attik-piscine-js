@@ -11,7 +11,8 @@
 
 (async function extractAllQuestions() {
     const allQuestions = {};
-    const totalExercises = 61;
+    const totalExercises = 105  ;
+    const start_at = 61 ;
     
     console.log('%c🚀 Starting extraction of all JavaScript questions...', 'color: #00ff00; font-size: 16px; font-weight: bold');
     console.log(`Total exercises to extract: ${totalExercises}\n`);
@@ -123,8 +124,8 @@
     }
     
     // Extract all questions
-    for (let i = 1; i <= totalExercises; i++) {
-        await sleep(800); // Wait for page to render
+    for (let i = start_at; i <= totalExercises; i++) {
+        await sleep(1500); // Wait for page to render
         
         const questionData = extractCurrentQuestion();
         

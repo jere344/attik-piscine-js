@@ -39,3 +39,16 @@ console.log(sommeTableau([1, 2, 3, 4, 5]));
 console.log(sommeTableau([100]));
 console.log(sommeTableau([]));
 
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 055: Somme d\'un tableau', [
+        { input: [[5, 10, 15, 20, 25]], expected: 75, description: 'Sum of 5, 10, 15, 20, 25' },
+        { input: [[1, 2, 3, 4, 5]], expected: 15, description: 'Sum of 1 to 5' },
+        { input: [[100]], expected: 100, description: 'Single element' },
+        { input: [[]], expected: 0, description: 'Empty array' }
+    ], sommeTableau);
+}
+

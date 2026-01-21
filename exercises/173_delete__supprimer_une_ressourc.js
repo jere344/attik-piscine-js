@@ -55,3 +55,9 @@ const supprimerRessource = async (id) => {
 
 supprimerRessource(123);
 
+// ==================== NON_TESTABLE ====================
+// This exercise requires the fetch API, network DELETE requests, and browser confirm().
+// Must be tested in a browser.
+
+module.exports.NON_TESTABLE = 'Requires fetch API, network, and browser confirm() - browser only';
+

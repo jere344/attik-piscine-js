@@ -64,3 +64,9 @@ async function chargerDonnees() {
 
 chargerDonnees();
 
+// ==================== NON_TESTABLE ====================
+// This exercise requires the fetch API which is not available in Node.js test environment.
+// Must be tested in a browser or with fetch polyfill.
+
+module.exports.NON_TESTABLE = 'Requires fetch API - browser only';
+

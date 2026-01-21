@@ -79,3 +79,9 @@ async function chargerDonneesEnParallele() {
 }
 
 chargerDonneesEnParallele();
+
+// ==================== NON_TESTABLE ====================
+// This exercise demonstrates async/await with Promise.all() and timeouts.
+// Testing requires waiting for async operations.
+
+module.exports.NON_TESTABLE = 'Demonstrates async/await with Promise.all() and timeouts';

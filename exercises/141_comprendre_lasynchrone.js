@@ -49,3 +49,9 @@ setTimeout(() => {
 
 console.log("3. Fin");
 
+// ==================== NON_TESTABLE ====================
+// This exercise demonstrates asynchronous behavior with setTimeout.
+// Testing requires waiting for timeouts and capturing console output.
+
+module.exports.NON_TESTABLE = 'Demonstrates async behavior with setTimeout';
+

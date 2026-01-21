@@ -32,5 +32,10 @@ let couleurs = ["rouge", "vert", "bleu"];
 let [premiere, deuxieme, troisieme] = couleurs;
 console.log(premiere);   
 console.log(deuxieme);
-console.log(troisieme);  
+console.log(troisieme);
+
+// ==================== NON_TESTABLE ====================
+// This exercise demonstrates destructuring syntax with console output only.
+
+module.exports.NON_TESTABLE = 'Console output only, demonstrates destructuring syntax';  
 

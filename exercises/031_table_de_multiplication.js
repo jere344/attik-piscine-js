@@ -38,3 +38,8 @@ function multiplicationTable(n) {
 multiplicationTable(5);
 multiplicationTable(9);
 
+// ==================== NON_TESTABLE ====================
+// This exercise outputs to console only, testing would require capturing console.log
+
+module.exports.NON_TESTABLE = 'Console output only, no return value';
+

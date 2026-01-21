@@ -35,3 +35,8 @@ let estDeveloppeur = true;
 console.log(prenom);
 console.log(age);
 console.log(estDeveloppeur);
+
+// ==================== NON_TESTABLE ====================
+// This exercise is about variable declaration and console output only.
+
+module.exports.NON_TESTABLE = 'Console output only, no testable return value';

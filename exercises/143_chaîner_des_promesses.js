@@ -86,5 +86,8 @@ etape1()
         console.log('Chaîne de Promesses terminée');
     });
 
+// ==================== NON_TESTABLE ====================
+// This exercise demonstrates promise chaining with async operations.
+// Testing requires waiting for promises and capturing console output.
 
-    
+module.exports.NON_TESTABLE = 'Demonstrates promise chaining with timeouts';
