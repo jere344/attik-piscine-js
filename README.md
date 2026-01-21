@@ -1,6 +1,6 @@
 # Attik Piscine JS - JavaScript Exercises
 
-61 JavaScript exercises with automated testing framework.
+JavaScript exercises with automated testing framework.
 
 ## Quick Start
 
@@ -19,18 +19,18 @@ node 174_headers_et_authentification.js
 
 ```
 📊 SUMMARY
-Total exercises scanned: 28
-Exercises with automated tests: 22
-Non-testable exercises (manual): 6
-Total tests passed: 69
+
+Total exercises scanned: 105
+Exercises with automated tests: 42
+Non-testable exercises (manual): 23
+Total tests passed: 143
+Total tests failed: 0
+
 Pass rate: 100.0%
+
+🎉 All automated tests passed!
+⚠️  Don't forget to manually test 23 non-testable exercise(s)
 ```
-
-## Structure
-
-- `exercises/` - 61 JavaScript exercises
-- `test-framework.js` - Reusable test utility
-- `run-tests.js` - Automated test runner
 
 
 ## Adding Tests
