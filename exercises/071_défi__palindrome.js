@@ -30,8 +30,24 @@
 
 // ==================== SOLUTION ====================
 
+function isPalindrome(str) {
+    const lowerStr = str.toLowerCase();
+    const len = lowerStr.length;
+    for (let i = 0; i < len / 2; i++) {
+        if (lowerStr[i] !== lowerStr[len - 1 - i]) {
+             console.log("Not palindrome");
+            return false;
+        }
+    }
+    console.log("Is palindrome");
+    return true;
+}
+
+isPalindrome("radar")
+
 // TODO: Write your solution below
 
 // Your code here
+
 
 
