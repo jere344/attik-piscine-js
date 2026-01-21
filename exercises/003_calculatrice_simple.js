@@ -32,3 +32,24 @@
 // TODO: Write your solution below
 
 // Your code here
+
+function calculator(num1, operator, num2) {
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            return num1 / num2;
+        default:
+            return "Opérateur invalide";
+    }
+}
+
+console.log(calculator(10, '+', 5));
+console.log(calculator(10, '-', 5));
+console.log(calculator(10, '*', 5));
+console.log(calculator(10, '/', 5));
+console.log(calculator(10, '%', 3));

@@ -31,3 +31,9 @@
 // TODO: Write your solution below
 
 // Your code here
+let count = 10;
+while (count >= 0) {
+    console.log(count);
+    count--;
+}
+console.log('Décollage !');

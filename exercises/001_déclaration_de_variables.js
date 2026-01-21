@@ -28,3 +28,10 @@
 // TODO: Declare your variables below
 
 // Your code here
+let prenom = "Winner"; 
+let age = 13; 
+let estDeveloppeur = true; 
+
+console.log(prenom);
+console.log(age);
+console.log(estDeveloppeur);

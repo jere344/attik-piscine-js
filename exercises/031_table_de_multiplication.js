@@ -27,3 +27,14 @@
 // TODO: Write your solution below
 
 // Your code here
+
+function multiplicationTable(n) {
+    for (let i = 1; i <= 10; i++) {
+        let result = n * i;
+        console.log(`${n} x ${i} = ${result}`);
+    }
+}
+
+multiplicationTable(5);
+multiplicationTable(9);
+
