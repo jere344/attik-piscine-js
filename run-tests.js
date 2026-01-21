@@ -23,7 +23,7 @@ function colorize(text, color) {
     return `${colors[color]}${text}${colors.reset}`;
 }
 
-// Get all even-numbered exercise files
+// Get all exercise files
 function getExerciseFiles() {
     const exercisesDir = path.join(__dirname, 'exercises');
     const files = fs.readdirSync(exercisesDir);
@@ -32,11 +32,7 @@ function getExerciseFiles() {
         .filter(file => file.endsWith('.js') && !file.includes('.html'))
         .filter(file => {
             const match = file.match(/^(\d+)_/);
-            if (match) {
-                const num = parseInt(match[1]);
-                return num % 2 === 0;
-            }
-            return false;
+            return !!match; // Include all numbered exercises
         })
         .sort((a, b) => {
             const numA = parseInt(a.match(/^(\d+)_/)[1]);
@@ -110,7 +106,7 @@ function runTestsForFile(filePath) {
 
 // Main test runner
 function runAllTests() {
-    console.log(colorize('🚀 Piscine JS Test Runner - Even-Numbered Exercises', 'cyan'));
+    console.log(colorize('🚀 Piscine JS Test Runner - All Exercises', 'cyan'));
     console.log('=' .repeat(80) + '\n');
     
     const exercisesDir = path.join(__dirname, 'exercises');
