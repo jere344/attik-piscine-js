@@ -25,6 +25,20 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function repeatString(str, times) {
+    return str.repeat(times);
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 200.2: Repeat String', [
+        { input: ["ha", 3], expected: "hahaha", description: 'repeatString("ha", 3) = "hahaha"' },
+        { input: ["Go ", 2], expected: "Go Go ", description: 'repeatString("Go ", 2) = "Go Go "' },
+        { input: ["?", 5], expected: "?????", description: 'repeatString("?", 5) = "?????"' },
+        { input: ["abc", 0], expected: "", description: 'repeatString("abc", 0) = ""' },
+        { input: ["", 10], expected: "", description: 'repeatString("", 10) = ""' }
+    ], repeatString);
+}

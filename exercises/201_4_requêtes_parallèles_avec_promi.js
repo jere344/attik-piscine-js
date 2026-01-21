@@ -35,6 +35,52 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function operation1() {
+    return new Promise(resolve => {
+        setTimeout(() => resolve('Résultat 1'), 100);
+    });
+}
 
-// Your code here
+function operation2() {
+    return new Promise(resolve => {
+        setTimeout(() => resolve('Résultat 2'), 150);
+    });
+}
+
+function operation3() {
+    return new Promise(resolve => {
+        setTimeout(() => resolve('Résultat 3'), 80);
+    });
+}
+
+async function executerEnParallele() {
+    const [a, b, c] = await Promise.all([
+        operation1(),
+        operation2(),
+        operation3()
+    ]);
+    
+    return { a, b, c };
+}
+
+async function executerEnSequentiel() {
+    const a = await operation1();
+    const b = await operation2();
+    const c = await operation3();
+    
+    return { a, b, c };
+}
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.runAsync('Exercise 201.4: Parallel Promises with Promise.all', [
+        { 
+            input: [], 
+            expected: { a: 'Résultat 1', b: 'Résultat 2', c: 'Résultat 3' }, 
+            description: 'Exécution parallèle avec Promise.all' 
+        }
+    ], executerEnParallele);
+}

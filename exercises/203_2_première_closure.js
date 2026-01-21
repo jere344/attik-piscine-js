@@ -35,6 +35,60 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function creerCompteur() {
+    let compteur = 0;
 
-// Your code here
+    return function() {
+        compteur++;
+        return compteur;
+    };
+}
+
+function creerCompteurAvecReset() {
+    let compteur = 0;
+
+    return {
+        incrementer: function() {
+            compteur++;
+            return compteur;
+        },
+        decrementer: function() {
+            compteur--;
+            return compteur;
+        },
+        reset: function() {
+            compteur = 0;
+            return compteur;
+        },
+        valeur: function() {
+            return compteur;
+        }
+    };
+}
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 203.2: First Closure - Counter Increment', [
+        { input: 0, expected: 1, description: 'First call returns 1' },
+        { input: 0, expected: 2, description: 'Second call returns 2' },
+        { input: 0, expected: 3, description: 'Third call returns 3' }
+    ], (() => {
+        const counter = creerCompteur();
+        return () => counter();
+    })());
+
+    test.run('Exercise 203.2: First Closure - Counter with Reset', [
+        { input: 0, expected: [1, 2, 0, 1], description: 'Increment, Increment, Reset, Increment' }
+    ], (() => {
+        const counter = creerCompteurAvecReset();
+        return () => [
+            counter.incrementer(),
+            counter.incrementer(),
+            counter.reset(),
+            counter.incrementer()
+        ];
+    })());
+}

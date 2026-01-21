@@ -38,7 +38,7 @@ Pass rate: 100.0%
 ```javascript
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (module.exports) {
     const test = require('../test-framework');
     
     test.run('Exercise Name', [
@@ -49,8 +49,6 @@ if (typeof module !== 'undefined' && module.exports) {
 
 For non-testable exercises:
 ```javascript
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Reason';
-}
+module.exports.NON_TESTABLE = 'Reason';
 ```
 

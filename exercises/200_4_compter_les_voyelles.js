@@ -26,6 +26,29 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function countVowels(str) {
+    const vowels = 'aeiouAEIOU';
+    let count = 0;
+    
+    for (const char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    
+    return count;
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 200.4: Count Vowels', [
+        { input: "hello", expected: 2, description: 'countVowels("hello") = 2' },
+        { input: "JavaScript", expected: 3, description: 'countVowels("JavaScript") = 3' },
+        { input: "xyz", expected: 0, description: 'countVowels("xyz") = 0' },
+        { input: "AEIOU", expected: 5, description: 'countVowels("AEIOU") = 5' },
+        { input: "", expected: 0, description: 'countVowels("") = 0' }
+    ], countVowels);
+}
