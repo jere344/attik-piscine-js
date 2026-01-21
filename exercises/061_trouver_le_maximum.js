@@ -42,9 +42,15 @@ function findMax(arr) {
     }
     return max;
 }
-// Tests
-console.log(findMax([3, 45, 12, 78, 23, 9]));
-console.log(findMax([1, 2, 3, 4, 5]));
-console.log(findMax([-5, -2, -10, -1]));
-console.log(findMax([100]));
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 061: Trouver le maximum', [
+        { input: [[3, 45, 12, 78, 23, 9]], expected: 78, description: 'Mixed numbers' },
+        { input: [[1, 2, 3, 4, 5]], expected: 5, description: 'Sequential numbers' },
+        { input: [[-5, -2, -10, -1]], expected: -1, description: 'All negative' },
+        { input: [[100]], expected: 100, description: 'Single element' }
+    ], findMax);
+}
 

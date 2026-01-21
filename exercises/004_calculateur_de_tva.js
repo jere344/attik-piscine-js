@@ -27,6 +27,26 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function calculerTVA(prixHT, tauxTVA) {
+    const montantTVA = prixHT * tauxTVA;
+    const prixTTC = prixHT + montantTVA;
+    return { prixHT, montantTVA, prixTTC };
+}
 
-// Your code here
+// Example usage (commented out)
+// const result = calculerTVA(100, 0.20);
+// console.log(`Prix HT: ${result.prixHT}€`);
+// console.log(`Montant TVA: ${result.montantTVA}€`);
+// console.log(`Prix TTC: ${result.prixTTC}€`);
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 004: Calculateur de TVA', [
+        { input: [100, 0.20], expected: { prixHT: 100, montantTVA: 20, prixTTC: 120 } },
+        { input: [50, 0.20], expected: { prixHT: 50, montantTVA: 10, prixTTC: 60 } },
+        { input: [200, 0.10], expected: { prixHT: 200, montantTVA: 20, prixTTC: 220 } }
+    ], calculerTVA);
+}

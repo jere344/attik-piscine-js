@@ -39,10 +39,15 @@ function countVowels(str) {
     return count;
 }
 
-// Tests
-console.log(countVowels("Hello World"));   // 3
-console.log(countVowels("JavaScript"));    // 3
-console.log(countVowels("Piscine"));       // 4
-console.log(countVowels("bcdfg"));         // 0
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 043: Compter les voyelles', [
+        { input: 'Hello World', expected: 3, description: 'Mixed case with spaces' },
+        { input: 'JavaScript', expected: 3, description: 'Programming language' },
+        { input: 'Piscine', expected: 3, description: 'French word' },
+        { input: 'bcdfg', expected: 0, description: 'No vowels' }
+    ], countVowels);
+}
 
 

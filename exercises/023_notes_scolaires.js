@@ -49,9 +49,15 @@ function getGrade(score) {
     }
 }
 
-console.log(getGrade(85));
-console.log(getGrade(42));
-console.log(getGrade(73));
-console.log(getGrade(91));
-console.log(getGrade(58));
-console.log(getGrade(100));
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 023: Notes scolaires', [
+        { input: 95, expected: 'A', description: 'High A grade' },
+        { input: 85, expected: 'B', description: 'B grade' },
+        { input: 75, expected: 'C', description: 'C grade' },
+        { input: 65, expected: 'D', description: 'D grade' },
+        { input: 55, expected: 'F', description: 'Failing grade' },
+        { input: 100, expected: 'A', description: 'Perfect score' }
+    ], getGrade);
+}

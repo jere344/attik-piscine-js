@@ -28,6 +28,39 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+// Testable function that returns the number of attempts
+function trouverNombre(secret) {
+    let tentative = 1;
+    let essai = 1;
+    
+    while (essai !== secret) {
+        essai++;
+        tentative++;
+    }
+    
+    return tentative;
+}
 
-// Your code here
+// Original code
+const nombreSecret = 42;
+let tentative = 1;
+let essai = 1;
+
+while (essai !== nombreSecret) {
+    essai++;
+    tentative++;
+}
+console.log(`Trouvé en ${tentative} essais !`);
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Trouver un nombre', [
+        { input: 1, expected: 1, description: 'Secret is 1' },
+        { input: 10, expected: 10, description: 'Secret is 10' },
+        { input: 42, expected: 42, description: 'Secret is 42' },
+        { input: 100, expected: 100, description: 'Secret is 100' }
+    ], trouverNombre);
+}

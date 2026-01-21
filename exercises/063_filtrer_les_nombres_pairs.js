@@ -39,9 +39,15 @@ function filterEven(arr) {
     }
     return evenNumbers;
 }
-// Tests
-console.log(filterEven([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-console.log(filterEven([1, 3, 5, 7]));
-console.log(filterEven([2, 4, 6, 8]));
-console.log(filterEven([]));
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 063: Filtrer les nombres pairs', [
+        { input: [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]], expected: [2, 4, 6, 8, 10], description: 'Mixed odd and even' },
+        { input: [[1, 3, 5, 7]], expected: [], description: 'All odd numbers' },
+        { input: [[2, 4, 6, 8]], expected: [2, 4, 6, 8], description: 'All even numbers' },
+        { input: [[]], expected: [], description: 'Empty array' }
+    ], filterEven);
+}
 

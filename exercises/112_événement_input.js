@@ -51,6 +51,33 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Add your DOM manipulation code below
+// Testable function
+function traiterInput(valeur) {
+    const resultat = valeur === '' ? '' : valeur;
+    const longueur = valeur.length;
+    return { resultat, longueur };
+}
 
-// Your code here
+// Browser-only code
+if (typeof document !== 'undefined') {
+    const monInput = document.getElementById('monInput');
+    const resultat = document.getElementById('resultat');
+    const longueur = document.getElementById('longueur');
+
+    monInput.addEventListener('input', (event) => {
+        const valeur = event.target.value;
+        const traitement = traiterInput(valeur);
+        
+        // Afficher le texte tapé
+        resultat.textContent = traitement.resultat;
+        
+        // Afficher le nombre de caractères
+        longueur.textContent = traitement.longueur;
+    });
+}
+
+// ==================== NON_TESTABLE ====================
+// This exercise requires DOM interaction and input events in a browser.
+// Please open: 112_événement_input.html
+
+module.exports.NON_TESTABLE = 'Input events - open 112_événement_input.html in browser';

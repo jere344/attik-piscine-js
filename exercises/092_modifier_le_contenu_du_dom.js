@@ -46,6 +46,58 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Add your DOM manipulation code below
+// Functions that can be tested
+function modifierTexte(element, texte) {
+    if (element) element.textContent = texte;
+    return texte;
+}
 
-// Your code here
+function modifierHTML(element, html) {
+    if (element) element.innerHTML = html;
+    return html;
+}
+
+function ajouterClasse(element, classe) {
+    if (element && element.classList) {
+        element.classList.add(classe);
+        return true;
+    }
+    return false;
+}
+
+// Browser-only code
+if (typeof document !== 'undefined') {
+    // 1. Modifier le texte du titre
+    const titre = document.getElementById('titre');
+    modifierTexte(titre, "Nouveau titre modifié");
+
+    // 2. Modifier le HTML du div #contenu
+    const contenu = document.getElementById('contenu');
+    modifierHTML(contenu, "<p>Contenu <strong>HTML</strong> ajouté dynamiquement</p>");
+
+    // 3. Ajouter/enlever des classes CSS
+    const description = document.getElementById('description');
+    ajouterClasse(description, 'highlight');
+    ajouterClasse(description, 'large');
+
+    // 4. Modifier les styles inline
+    if (description) {
+        description.style.color = 'blue';
+        description.style.fontWeight = 'bold';
+    }
+
+    // 5. Modifier les attributs
+    const bouton = document.getElementById('monBouton');
+    if (bouton) {
+        bouton.setAttribute('disabled', 'true');
+        bouton.setAttribute('title', 'Ce bouton est désactivé');
+    }
+
+    console.log('DOM modifié avec succès!');
+}
+
+// ==================== NON_TESTABLE ====================
+// This exercise requires DOM interaction in a browser.
+// Please open: 092_modifier_le_contenu_du_dom.html
+
+module.exports.NON_TESTABLE = 'DOM manipulation - open 092_modifier_le_contenu_du_dom.html in browser';

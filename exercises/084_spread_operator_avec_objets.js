@@ -34,6 +34,43 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function copierObjet(obj) {
+    return { ...obj };
+}
 
-// Your code here
+function fusionnerObjets(obj1, obj2) {
+    return { ...obj1, ...obj2 };
+}
+
+function modifierPropriete(obj, cle, valeur) {
+    return { ...obj, [cle]: valeur };
+}
+
+// Example usage (commented out)
+// let personne = { nom: "Dupont", age: 30 };
+// let personneCopie = copierObjet(personne);
+// console.log("Copie:", personneCopie);
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 084: Spread operator - copier', [
+        { input: [{ nom: "Dupont", age: 30 }], expected: { nom: "Dupont", age: 30 } }
+    ], copierObjet);
+    
+    test.run('Exercise 084: Spread operator - fusionner', [
+        { 
+            input: [{ nom: "Martin" }, { email: "martin@email.com" }], 
+            expected: { nom: "Martin", email: "martin@email.com" } 
+        }
+    ], fusionnerObjets);
+    
+    test.run('Exercise 084: Spread operator - modifier', [
+        { 
+            input: [{ nom: "Dupont", age: 30 }, "age", 31], 
+            expected: { nom: "Dupont", age: 31 } 
+        }
+    ], modifierPropriete);
+}

@@ -24,6 +24,32 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function creerPhrase(nom, age, ville) {
+    // Using template literals instead of concatenation
+    return `Je m'appelle ${nom}, j'ai ${age} ans et j'habite à ${ville}.`;
+}
 
-// Your code here
+// Example usage
+// Example usage (commented out)
+// let nom = "Marie";
+// let age = 25;
+// let ville = "Paris";
+// let phrase = creerPhrase(nom, age, ville);
+// console.log(phrase);
+
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 072: Template literals', [
+        { 
+            input: ["Marie", 25, "Paris"], 
+            expected: "Je m'appelle Marie, j'ai 25 ans et j'habite à Paris." 
+        },
+        { 
+            input: ["Jean", 30, "Lyon"], 
+            expected: "Je m'appelle Jean, j'ai 30 ans et j'habite à Lyon." 
+        }
+    ], creerPhrase);
+}

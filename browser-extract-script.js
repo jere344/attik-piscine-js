@@ -1,7 +1,7 @@
 // Browser Console Script to Extract All JavaScript Questions
 // Instructions:
 // 1. Open https://book-st-pescinejs.onrender.com/Javascript in your browser
-// 2. Enter access code: JS_COURS85326
+// 2. Enter access code: [code donné par le professeur]
 // 3. Open browser DevTools (F12) and go to Console tab
 // 4. Paste this entire script and press Enter
 // 5. Wait for the script to complete (it will click through all 61 exercises)

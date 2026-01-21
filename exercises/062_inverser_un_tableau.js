@@ -26,6 +26,23 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function reverseArray(arr) {
+    const reversed = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversed.push(arr[i]);
+    }
+    return reversed;
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 062: Inverser un tableau', [
+        { input: [[1, 2, 3, 4, 5]], expected: [5, 4, 3, 2, 1] },
+        { input: [["a", "b", "c"]], expected: ["c", "b", "a"] },
+        { input: [[5]], expected: [5] },
+        { input: [[]], expected: [] }
+    ], reverseArray);
+}
