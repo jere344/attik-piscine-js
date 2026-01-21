@@ -26,6 +26,18 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function celsiusToFahrenheit(celsius) {
+    return celsius * 9/5 + 32;
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 002: Celsius to Fahrenheit', [
+        { input: 0, expected: 32, description: '0°C = 32°F' },
+        { input: 100, expected: 212, description: '100°C = 212°F' },
+        { input: -40, expected: -40, description: '-40°C = -40°F' }
+    ], celsiusToFahrenheit);
+}

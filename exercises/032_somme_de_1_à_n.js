@@ -25,6 +25,27 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function sumUpTo(n) {
+    let sum = 0;
+    for (let i = 1; i <= n; i++) {
+        sum += i;
+    }
+    return sum;
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 032: Somme de 1 à N', [
+        { input: 5, expected: 15, description: '1+2+3+4+5 = 15' },
+        { input: 10, expected: 55, description: '1+2+...+10 = 55' },
+        { input: 100, expected: 5050, description: '1+2+...+100 = 5050' }
+    ], sumUpTo);
+}
+
+// Tests
+console.log(sumUpTo(5));    // 15
+console.log(sumUpTo(10));   // 55
+console.log(sumUpTo(100));  // 5050

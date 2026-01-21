@@ -34,8 +34,34 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Implement the function below
+function filterEven(nombres) {
+    return nombres.filter(n => n % 2 === 0);
+}
 
-function functionName() {
-    // Your code here
+function doubleValues(nombres) {
+    return nombres.map(n => n * 2);
+}
+
+// Example usage (commented out)
+// let nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let pairs = filterEven(nombres);
+// let doubles = doubleValues(nombres);
+// console.log("Pairs:", pairs);
+// console.log("Doubles:", doubles);
+
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 074: Arrow functions - filter even', [
+        { input: [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]], expected: [2, 4, 6, 8, 10] },
+        { input: [[1, 3, 5]], expected: [] },
+        { input: [[2, 4, 6]], expected: [2, 4, 6] }
+    ], filterEven);
+    
+    test.run('Exercise 074: Arrow functions - double values', [
+        { input: [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]], expected: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20] },
+        { input: [[5, 10]], expected: [10, 20] }
+    ], doubleValues);
 }

@@ -21,6 +21,25 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function max3(a, b, c) {
+    if (a >= b && a >= c) {
+        return a;
+    } else if (b >= a && b >= c) {
+        return b;
+    } else {
+        return c;
+    }
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 022: Maximum de 3 nombres', [
+        { input: [1, 2, 3], expected: 3 },
+        { input: [10, 5, 8], expected: 10 },
+        { input: [-1, -5, -3], expected: -1 },
+        { input: [7, 7, 7], expected: 7 }
+    ], max3);
+}

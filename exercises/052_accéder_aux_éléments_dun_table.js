@@ -26,6 +26,35 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+// Testable function
+function accederElements(tableau) {
+    return {
+        premier: tableau[0],
+        troisieme: tableau[2],
+        dernier: tableau[tableau.length - 1]
+    };
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Accéder aux éléments', [
+        { 
+            input: [["JavaScript", "Python", "Java", "C++", "Ruby"]],
+            expected: { premier: "JavaScript", troisieme: "Java", dernier: "Ruby" },
+            description: '5 languages'
+        },
+        { 
+            input: [["A", "B", "C"]],
+            expected: { premier: "A", troisieme: "C", dernier: "C" },
+            description: '3 elements'
+        },
+        { 
+            input: [[1, 2, 3, 4, 5, 6, 7]],
+            expected: { premier: 1, troisieme: 3, dernier: 7 },
+            description: 'Number array'
+        }
+    ], accederElements);
+}

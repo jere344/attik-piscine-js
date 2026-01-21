@@ -24,6 +24,22 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function reverseString(str) {
+    let reversed = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+    return reversed;
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 044: Inverser une chaîne', [
+        { input: 'hello', expected: 'olleh' },
+        { input: 'JavaScript', expected: 'tpircSavaJ' },
+        { input: '12345', expected: '54321' }
+    ], reverseString);
+}

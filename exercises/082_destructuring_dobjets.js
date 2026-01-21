@@ -32,6 +32,39 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function extraireProprietesPersonne(personne) {
+    const { nom, prenom, age, ville } = personne;
+    return { nom, prenom, age, ville };
+}
 
-// Your code here
+let personne = {
+    nom: "Dupont",
+    prenom: "Marie",
+    age: 28,
+    ville: "Paris"
+};
+
+const { nom, prenom, age, ville } = personne;
+
+// Example usage (commented out)
+// console.log(nom);     // "Dupont"
+// console.log(prenom);  // "Marie"
+// console.log(age);     // 28
+// console.log(ville);   // "Paris"
+
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 082: Destructuring d\'objets', [
+        { 
+            input: [{ nom: "Dupont", prenom: "Marie", age: 28, ville: "Paris" }], 
+            expected: { nom: "Dupont", prenom: "Marie", age: 28, ville: "Paris" } 
+        },
+        { 
+            input: [{ nom: "Martin", prenom: "Jean", age: 35, ville: "Lyon" }], 
+            expected: { nom: "Martin", prenom: "Jean", age: 35, ville: "Lyon" } 
+        }
+    ], extraireProprietesPersonne);
+}

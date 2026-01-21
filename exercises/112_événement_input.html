@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Live</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #monInput {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        #resultat {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .info {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Saisie en temps réel</h1>
+    <input type="text" id="monInput" placeholder="Tapez quelque chose...">
+    <p class="info">Vous avez tapé : <span id="resultat"></span></p>
+    <p class="info">Nombre de caractères : <span id="longueur">0</span></p>
+
+    <script src="112_événement_input.js"></script>
+</body>
+</html>

@@ -97,6 +97,106 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+// Testable calculation function
+function calculer(previous, operator, current) {
+    let result;
+    
+    switch (operator) {
+        case '+':
+            result = previous + current;
+            break;
+        case '-':
+            result = previous - current;
+            break;
+        case '×':
+            result = previous * current;
+            break;
+        case '÷':
+            result = previous / current;
+            break;
+        default:
+            return null;
+    }
+    
+    return result;
+}
+
+// Browser-only code
+if (typeof document !== 'undefined') {
+    const display = document.getElementById('display');
+    const numbers = document.querySelectorAll('.number');
+    const operators = document.querySelectorAll('.operator');
+    const equal = document.querySelector('.equal');
+    const clear = document.getElementById('clear');
+
+    let currentValue = '0';
+    let previousValue = null;
+    let operator = null;
+    let shouldResetDisplay = false;
+
+    function updateDisplay() {
+        display.value = currentValue;
+    }
+
+    numbers.forEach(button => {
+        button.addEventListener('click', () => {
+            const number = button.textContent;
+            
+            if (shouldResetDisplay) {
+                currentValue = number;
+                shouldResetDisplay = false;
+            } else {
+                currentValue = currentValue === '0' ? number : currentValue + number;
+            }
+            
+            updateDisplay();
+        });
+    });
+
+    operators.forEach(button => {
+        button.addEventListener('click', () => {
+            const op = button.textContent;
+            
+            if (previousValue !== null && operator !== null && !shouldResetDisplay) {
+                const result = calculer(previousValue, operator, parseFloat(currentValue));
+                currentValue = result.toString();
+                updateDisplay();
+            }
+            
+            previousValue = parseFloat(currentValue);
+            operator = op;
+            currentValue = op;
+            updateDisplay();
+            shouldResetDisplay = true;
+        });
+    });
+
+    equal.addEventListener('click', () => {
+        if (operator !== null && previousValue !== null) {
+            const result = calculer(previousValue, operator, parseFloat(currentValue));
+            currentValue = result.toString();
+            operator = null;
+            previousValue = null;
+            updateDisplay();
+            shouldResetDisplay = true;
+        }
+    });
+
+    clear.addEventListener('click', () => {
+        currentValue = '0';
+        previousValue = null;
+        operator = null;
+        shouldResetDisplay = false;
+        updateDisplay();
+    });
+}
+
+// ==================== NON_TESTABLE ====================
+// This exercise requires DOM interaction with buttons and display in a browser.
+// Please open: 122_calculatrice_interactive.html
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports.NON_TESTABLE = 'Interactive calculator - open 122_calculatrice_interactive.html in browser';
+}
 
 // Your code here

@@ -35,6 +35,52 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+// Fonction simulant une opération asynchrone qui peut échouer
+function operationRisquee(success = true) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (success) {
+                resolve('Opération réussie !');
+            } else {
+                reject(new Error('Opération échouée'));
+            }
+        }, 1000);
+    });
+}
 
-// Your code here
+// Fonction avec gestion d'erreurs complète
+async function executerOperation(shouldSucceed) {
+    try {
+        // Code qui peut échouer
+        const resultat = await operationRisquee(shouldSucceed);
+        return resultat;
+        
+    } catch (erreur) {
+        // Gérer l'erreur
+        return { error: erreur.message };
+    } finally {
+        // Toujours exécuté (nettoyage)
+    }
+}
+
+// ==================== TESTS ====================
+
+if (typeof module !== 'undefined' && module.exports) {
+    const test = require('../test-framework');
+    
+    test.runAsync('Exercise 152: Gestion d\'erreurs', [
+        {
+            input: true,
+            expected: 'Opération réussie !',
+            description: 'Success case'
+        },
+        {
+            input: false,
+            expected: { error: 'Opération échouée' },
+            description: 'Error case'
+        }
+    ], async (shouldSucceed) => {
+        return await executerOperation(shouldSucceed);
+    });
+}
+
