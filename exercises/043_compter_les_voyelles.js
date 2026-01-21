@@ -28,4 +28,21 @@
 
 // TODO: Write your solution below
 
-// Your code here
+function countVowels(str) {
+    let count = 0;
+    const vowels = 'aeiouAEIOU';
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+
+// Tests
+console.log(countVowels("Hello World"));   // 3
+console.log(countVowels("JavaScript"));    // 3
+console.log(countVowels("Piscine"));       // 4
+console.log(countVowels("bcdfg"));         // 0
+
+

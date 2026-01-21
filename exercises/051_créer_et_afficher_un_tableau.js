@@ -28,3 +28,8 @@
 // TODO: Write your solution below
 
 // Your code here
+
+let languages = ["JavaScript", "Python", "Java", "C++", "Ruby"];
+console.log(languages);
+console.log("Nombre de langages: " + languages.length);
+

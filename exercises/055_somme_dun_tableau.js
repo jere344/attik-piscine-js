@@ -25,3 +25,17 @@
 // TODO: Write your solution below
 
 // Your code here
+
+function sommeTableau(arr) {
+    let somme = 0;
+    for (let i = 0; i < arr.length; i++) {
+        somme += arr[i];
+    }
+    return somme;
+}
+// Tests
+console.log(sommeTableau([5, 10, 15, 20, 25]));
+console.log(sommeTableau([1, 2, 3, 4, 5]));
+console.log(sommeTableau([100]));
+console.log(sommeTableau([]));
+

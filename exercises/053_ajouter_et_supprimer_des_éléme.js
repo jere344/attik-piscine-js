@@ -33,3 +33,12 @@
 // TODO: Write your solution below
 
 // Your code here
+
+let languages = ["JavaScript", "Python", "Java"];
+console.log("Initial: " + JSON.stringify(languages));
+languages.push("Go");
+console.log("Après push: " + JSON.stringify(languages));
+languages.pop();
+console.log("Après pop: " + JSON.stringify(languages));
+languages.unshift("TypeScript");
+console.log("Après unshift: " + JSON.stringify(languages));
