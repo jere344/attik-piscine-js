@@ -38,4 +38,4 @@ function evenOrOdd(number) {
     }
 }
 
-console.log(evenOrOdd(54));
+console.log(evenOrOdd(154));

@@ -1,0 +1,32 @@
+
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <title>Formulaire</title>
+  </head>
+  <body>
+      <form id="monFormulaire">
+          <input type="text" id="nom" placeholder="Nom" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <button type="submit">Envoyer</button>
+      </form>
+      <div id="message"></div>
+  
+      <script>
+         const formulaire = document.getElementById('monFormulaire');
+        const messageDiv = document.getElementById('message');
+        formulaire.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+           const nom = document.getElementById('nom').value;
+           const email = document.getElementById('email').value;
+           messageDiv.textContent = `Formulaire soumis ! Nom: ${nom}, Email: ${email}`;
+           formulaire.reset(); 
+       });
+ 
+      </script>
+  </body>
+  </html>
+ 
+
+

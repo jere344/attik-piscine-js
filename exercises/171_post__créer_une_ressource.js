@@ -36,3 +36,31 @@
 // TODO: Write your solution below
 
 // Your code here
+
+const creerRessource = async (data) => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+        const nouvelleRessource = await response.json();
+        console.log('Ressource créée:', nouvelleRessource);
+        return nouvelleRessource;
+    } catch (erreur) {
+        console.error('Erreur lors de la création de la ressource:', erreur);
+    }
+};
+
+const nouvelleDonnee = {
+    title: 'foo',
+    body: 'bar',
+    userId: 1
+};
+
+creerRessource(nouvelleDonnee);

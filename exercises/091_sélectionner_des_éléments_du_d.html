@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <html lang="fr">
+  <head>
+      <meta charset="UTF-8">
+      <title>DOM - Sélection</title>
+  </head>
+  <body>
+      <h1 id="titre">Bienvenue</h1>
+      <p class="paragraphe">Premier paragraphe</p>
+      <p class="paragraphe">Deuxième paragraphe</p>
+      <ul id="liste">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+      </ul>
+      <button id="monBouton">Cliquer</button>
+  
+      <script>
+        let titre = document.getElementById("titre");
+        console.log(titre.textContent);
+
+        let paragraphes = document.querySelectorAll(".paragraphe");
+        paragraphes.forEach((p) => {
+            console.log(p.textContent);
+        });
+
+        let items = document.querySelectorAll("#liste li");
+        items.forEach((item) => {
+            console.log(item.textContent);
+        });
+      </script>
+  </body>
+</html>
+
+
+
+

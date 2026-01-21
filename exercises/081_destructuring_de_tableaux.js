@@ -27,3 +27,10 @@
 // TODO: Write your solution below
 
 // Your code here
+
+let couleurs = ["rouge", "vert", "bleu"];
+let [premiere, deuxieme, troisieme] = couleurs;
+console.log(premiere);   
+console.log(deuxieme);
+console.log(troisieme);  
+

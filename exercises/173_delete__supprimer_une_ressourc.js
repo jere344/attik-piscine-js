@@ -32,3 +32,26 @@
 // TODO: Write your solution below
 
 // Your code here
+
+const supprimerRessource = async (id) => {
+    const confirmation = confirm('Êtes-vous sûr de vouloir supprimer cette ressource ?');
+    if (!confirmation) {
+        return;
+    }
+    try {
+        const response = await fetch(`/api/ressource/${id}`, {
+            method: 'DELETE'
+        });
+        if (response.ok) {
+            console.log('Ressource supprimée avec succès');
+            // Mettre à jour l'interface utilisateur ici
+        } else {
+            console.error('Échec de la suppression de la ressource');
+        }
+    } catch (erreur) {
+        console.error('Erreur lors de la suppression:', erreur);
+    }
+};
+
+supprimerRessource(123);
+

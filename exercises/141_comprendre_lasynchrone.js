@@ -41,3 +41,11 @@
 // TODO: Write your solution below
 
 // Your code here
+console.log("1. Début");
+
+setTimeout(() => {
+    console.log("2. Milieu (après 2 secondes)");
+}, 2000);
+
+console.log("3. Fin");
+
