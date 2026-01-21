@@ -1,5 +1,5 @@
 /*
- * Exercise 202: Méthodes statiques
+ * Exercise 202.4: Méthodes statiques
  * Exercice 74 / 105
  * ============================================================
  */

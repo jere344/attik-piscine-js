@@ -1,6 +1,6 @@
 /*
  * Exercise 174: Headers et authentification
- * Exercice 61 / 61
+ * Exercice 61 / 105
  * ============================================================
  */
 

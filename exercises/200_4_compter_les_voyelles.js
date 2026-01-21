@@ -1,5 +1,5 @@
 /*
- * Exercise 200: Compter les voyelles
+ * Exercise 200.4: Compter les voyelles
  * Exercice 65 / 105
  * ============================================================
  */

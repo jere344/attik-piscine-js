@@ -1,6 +1,6 @@
 /*
  * Exercise 052: Accéder aux éléments d'un tableau
- * Exercice 18 / 61
+ * Exercice 18 / 105
  * ============================================================
  */
 

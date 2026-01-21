@@ -1,6 +1,6 @@
 /*
  * Exercise 152: Gestion d'erreurs avec try/catch
- * Exercice 51 / 61
+ * Exercice 51 / 105
  * ============================================================
  */
 

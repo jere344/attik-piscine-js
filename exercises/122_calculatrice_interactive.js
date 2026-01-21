@@ -1,6 +1,6 @@
 /*
  * Exercise 122: Calculatrice interactive
- * Exercice 41 / 61
+ * Exercice 41 / 105
  * ============================================================
  */
 

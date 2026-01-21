@@ -1,6 +1,6 @@
 /*
  * Exercise 092: Modifier le contenu du DOM
- * Exercice 35 / 61
+ * Exercice 35 / 105
  * ============================================================
  */
 

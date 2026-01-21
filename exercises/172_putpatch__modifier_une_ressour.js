@@ -1,6 +1,6 @@
 /*
  * Exercise 172: PUT/PATCH - Modifier une ressource
- * Exercice 59 / 61
+ * Exercice 59 / 105
  * ============================================================
  */
 

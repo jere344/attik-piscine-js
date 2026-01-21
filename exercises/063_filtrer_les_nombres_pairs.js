@@ -1,6 +1,6 @@
 /*
  * Exercise 063: Filtrer les nombres pairs
- * Exercice 24 / 61
+ * Exercice 24 / 105
  * ============================================================
  */
 

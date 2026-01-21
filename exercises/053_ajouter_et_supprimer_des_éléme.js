@@ -1,6 +1,6 @@
 /*
  * Exercise 053: Ajouter et supprimer des éléments
- * Exercice 18 / 61
+ * Exercice 18 / 105
  * ============================================================
  */
 

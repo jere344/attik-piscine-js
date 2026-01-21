@@ -1,6 +1,6 @@
 /*
  * Exercise 153: Async/await avec Promise.all()
- * Exercice 52 / 61
+ * Exercice 52 / 105
  * ============================================================
  */
 

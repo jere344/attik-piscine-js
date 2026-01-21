@@ -1,6 +1,6 @@
 /*
  * Exercise 003: Calculatrice simple
- * Exercice 3 / 61
+ * Exercice 3 / 105
  * ============================================================
  */
 

@@ -1,5 +1,5 @@
 /*
- * Exercise 203: Memoization avec closures
+ * Exercise 203.6: Memoization avec closures
  * Exercice 80 / 105
  * ============================================================
  */

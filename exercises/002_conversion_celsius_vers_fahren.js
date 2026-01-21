@@ -1,6 +1,6 @@
 /*
  * Exercise 002: Conversion Celsius vers Fahrenheit
- * Exercice 2 / 61
+ * Exercice 2 / 105
  * ============================================================
  */
 

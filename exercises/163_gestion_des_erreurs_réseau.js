@@ -1,6 +1,6 @@
 /*
  * Exercise 163: Gestion des erreurs réseau
- * Exercice 56 / 61
+ * Exercice 56 / 105
  * ============================================================
  */
 

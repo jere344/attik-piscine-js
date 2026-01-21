@@ -108,10 +108,13 @@ def main():
     for exercise_key, exercise_data in questions.items():
         exercise_num = exercise_data.get("exerciseNumber", "000")
         title_slug = exercise_data.get("title", "exercise").lower()
+        # Clean the title: remove all non-alphanumeric characters except spaces
         title_slug = "".join(c if c.isalnum() or c == " " else "" for c in title_slug)
         title_slug = title_slug.replace(" ", "_")[:30]
         
-        filename = f"{exercise_num}_{title_slug}.js"
+        # Replace dots with underscores for filename (200.3 -> 200_3)
+        exercise_num_clean = exercise_num.replace(".", "_")
+        filename = f"{exercise_num_clean}_{title_slug}.js"
         filepath = output_dir / filename
         
         content = generate_exercise_file(exercise_key, exercise_data)
@@ -119,6 +122,7 @@ def main():
         if filepath.exists():
             print(f"⚠️  Skipping existing file: {filename}")
             continue
+        
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(content)
         

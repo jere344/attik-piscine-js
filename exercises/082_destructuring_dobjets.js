@@ -1,6 +1,6 @@
 /*
  * Exercise 082: Destructuring d'objets
- * Exercice 31 / 61
+ * Exercice 31 / 105
  * ============================================================
  */
 

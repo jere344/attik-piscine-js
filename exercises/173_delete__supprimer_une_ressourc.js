@@ -1,6 +1,6 @@
 /*
  * Exercise 173: DELETE - Supprimer une ressource
- * Exercice 60 / 61
+ * Exercice 60 / 105
  * ============================================================
  */
 

@@ -1,6 +1,6 @@
 /*
  * Exercise 051: Créer et afficher un tableau
- * Exercice 17 / 61
+ * Exercice 17 / 105
  * ============================================================
  */
 

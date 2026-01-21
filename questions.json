@@ -532,7 +532,7 @@
     "codeExamples": [
       "Initial: [\"JavaScript\", \"Python\", \"Java\"]\nAprès push: [\"JavaScript\", \"Python\", \"Java\", \"Go\"]\nAprès pop: [\"JavaScript\", \"Python\", \"Java\"]\nAprès unshift: [\"TypeScript\", \"JavaScript\", \"Python\", \"Java\"]"
     ],
-    "progress": "Exercice 18 / 105"
+    "progress": "Exercice 19 / 105"
   },
   "exercise_054": {
     "exerciseNumber": "054",
@@ -1838,8 +1838,89 @@
     ],
     "progress": "Exercice 61 / 105"
   },
-  "exercise_200": {
-    "exerciseNumber": "200",
+  "exercise_200_1": {
+    "exerciseNumber": "200.1",
+    "title": "Concaténer deux chaînes",
+    "paragraphs": [
+      "Implémentez une fonction qui combine deux chaînes de caractères avec un espace entre elles."
+    ],
+    "listItems": [
+      "✅ Utiliser l'opérateur de concaténation +",
+      "✅ Comprendre les template literals",
+      "✅ Découvrir la méthode concat()",
+      "✅ Maîtriser l'assemblage de chaînes"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples :"
+      }
+    ],
+    "codeExamples": [
+      "concatStrings(\"Hello\", \"World\") // \"Hello World\"\nconcatStrings(\"Bonjour\", \"JS\")   // \"Bonjour JS\"\nconcatStrings(\"\", \"Test\")        // \" Test\""
+    ],
+    "progress": "Exercice 62 / 105"
+  },
+  "exercise_200_2": {
+    "exerciseNumber": "200.2",
+    "title": "Répéter une chaîne",
+    "paragraphs": [
+      "Implémentez une fonction qui répète une chaîne de caractères un nombre donné de fois."
+    ],
+    "listItems": [
+      "✅ Utiliser la méthode native repeat()",
+      "✅ Comprendre les boucles pour la répétition",
+      "✅ Découvrir les approches alternatives (Array.from, récursivité)",
+      "✅ Maîtriser la manipulation de chaînes"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples :"
+      }
+    ],
+    "codeExamples": [
+      "repeatString(\"ha\", 3)   // \"hahaha\"\nrepeatString(\"Go \", 2)  // \"Go Go \"\nrepeatString(\"?\", 5)    // \"?????\""
+    ],
+    "progress": "Exercice 63 / 105"
+  },
+  "exercise_200_3": {
+    "exerciseNumber": "200.3",
+    "title": "Inverser une chaîne",
+    "paragraphs": [
+      "Implémentez une fonction qui inverse l'ordre des caractères dans une chaîne."
+    ],
+    "listItems": [
+      "✅ Utiliser la combinaison split() + reverse() + join()",
+      "✅ Comprendre la conversion chaîne ↔ tableau",
+      "✅ Découvrir les approches alternatives (boucle, reduce, récursivité)",
+      "✅ Maîtriser la manipulation de chaînes"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples :"
+      }
+    ],
+    "codeExamples": [
+      "reverseString(\"hello\")      // \"olleh\"\nreverseString(\"JavaScript\") // \"tpircSavaJ\"\nreverseString(\"123\")        // \"321\""
+    ],
+    "progress": "Exercice 64 / 105"
+  },
+  "exercise_200_4": {
+    "exerciseNumber": "200.4",
     "title": "Compter les voyelles",
     "paragraphs": [
       "Implémentez une fonction qui compte le nombre de voyelles (a, e, i, o, u) dans une chaîne, en gérant les majuscules et minuscules."
@@ -1865,8 +1946,116 @@
     ],
     "progress": "Exercice 65 / 105"
   },
-  "exercise_201": {
-    "exerciseNumber": "201",
+  "exercise_201_1": {
+    "exerciseNumber": "201.1",
+    "title": "Première fonction async",
+    "paragraphs": [
+      "Réécrivez du code avec Promesses en utilisant async/await."
+    ],
+    "listItems": [
+      "✅ Comprendre le mot-clé async",
+      "✅ Utiliser await pour attendre une Promesse",
+      "✅ Créer une fonction async simple",
+      "✅ Comparer avec la syntaxe des Promesses"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemple :"
+      }
+    ],
+    "codeExamples": [
+      "// Fonction qui retourne une Promesse\nfunction attendreDelai(ms) {\n    return new Promise((resolve) => {\n        setTimeout(resolve, ms);\n    });\n}\n\n// Fonction async qui utilise await\nasync function afficherMessage() {\n    console.log(\"⏳ Attente...\");\n    await attendreDelai(2000);\n    console.log(\"✅ Terminé !\");\n}"
+    ],
+    "progress": "Exercice 66 / 105"
+  },
+  "exercise_201_2": {
+    "exerciseNumber": "201.2",
+    "title": "Gestion d'erreurs avec try/catch",
+    "paragraphs": [
+      "Gérez les erreurs dans du code asynchrone avec try/catch."
+    ],
+    "listItems": [
+      "✅ Utiliser try/catch avec async/await",
+      "✅ Créer des erreurs personnalisées",
+      "✅ Utiliser le bloc finally",
+      "✅ Gérer les échecs proprement"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Structure :"
+      }
+    ],
+    "codeExamples": [
+      "async function maFonction() {\n    try {\n        const resultat = await operationAsynchrone();\n        console.log(resultat);\n    } catch (erreur) {\n        console.error('Erreur:', erreur.message);\n    } finally {\n        console.log('Terminé');\n    }\n}"
+    ],
+    "progress": "Exercice 67 / 105"
+  },
+  "exercise_201_3": {
+    "exerciseNumber": "201.3",
+    "title": "Requêtes séquentielles",
+    "paragraphs": [
+      "Exécutez des opérations asynchrones en séquence."
+    ],
+    "listItems": [
+      "✅ Comprendre l'exécution séquentielle",
+      "✅ Chaîner plusieurs await",
+      "✅ Chaque étape attend la précédente",
+      "✅ Gérer les erreurs à chaque étape"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemple :"
+      }
+    ],
+    "codeExamples": [
+      "async function traiterCommande() {\n    try {\n        const stock = await verifierStock();\n        const paiement = await traiterPaiement();\n        const envoi = await envoyerColis();\n        console.log('Commande terminée');\n    } catch (erreur) {\n        console.error('Erreur:', erreur);\n    }\n}"
+    ],
+    "progress": "Exercice 68 / 105"
+  },
+  "exercise_201_4": {
+    "exerciseNumber": "201.4",
+    "title": "Requêtes parallèles avec Promise.all",
+    "paragraphs": [
+      "Exécutez plusieurs opérations en parallèle pour optimiser les performances."
+    ],
+    "listItems": [
+      "✅ Comprendre le parallélisme",
+      "✅ Utiliser Promise.all() avec await",
+      "✅ Comparer avec l'exécution séquentielle",
+      "✅ Optimiser les performances"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Comparaison :"
+      }
+    ],
+    "codeExamples": [
+      "// Séquentiel (lent)\nconst a = await op1(); // 1s\nconst b = await op2(); // 1s\nconst c = await op3(); // 1s\n// Total: 3s\n\n// Parallèle (rapide)\nconst [a, b, c] = await Promise.all([\n    op1(),\n    op2(),\n    op3()\n]);\n// Total: 1s (le plus long)"
+    ],
+    "progress": "Exercice 69 / 105"
+  },
+  "exercise_201_5": {
+    "exerciseNumber": "201.5",
     "title": "Fetch API avec async/await",
     "paragraphs": [
       "Utilisez async/await avec l'API Fetch pour récupérer des données."
@@ -1892,8 +2081,89 @@
     ],
     "progress": "Exercice 70 / 105"
   },
-  "exercise_202": {
-    "exerciseNumber": "202",
+  "exercise_202_1": {
+    "exerciseNumber": "202.1",
+    "title": "Première classe",
+    "paragraphs": [
+      "Créez votre première classe ES6."
+    ],
+    "listItems": [
+      "✅ Utiliser le mot-clé class",
+      "✅ Définir un constructor",
+      "✅ Créer des méthodes",
+      "✅ Instancier avec new"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Structure de base :"
+      }
+    ],
+    "codeExamples": [
+      "class Voiture {\n    constructor(marque, modele, annee) {\n        this.marque = marque;\n        this.modele = modele;\n        this.annee = annee;\n    }\n\n    afficherInfos() {\n        console.log(`${this.marque} ${this.modele}`);\n    }\n}\n\nconst voiture = new Voiture(\"Tesla\", \"Model 3\", 2023);"
+    ],
+    "progress": "Exercice 71 / 105"
+  },
+  "exercise_202_2": {
+    "exerciseNumber": "202.2",
+    "title": "Getters et Setters",
+    "paragraphs": [
+      "Utilisez getters et setters pour contrôler l'accès aux propriétés."
+    ],
+    "listItems": [
+      "✅ Définir des getters avec get",
+      "✅ Définir des setters avec set",
+      "✅ Valider les données dans les setters",
+      "✅ Utiliser la convention underscore pour propriétés privées"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemple :"
+      }
+    ],
+    "codeExamples": [
+      "class Personne {\n    constructor(nom, age) {\n        this._nom = nom;\n        this._age = age;\n    }\n\n    get age() {\n        return this._age;\n    }\n\n    set age(nouvelAge) {\n        if (nouvelAge >= 0) {\n            this._age = nouvelAge;\n        }\n    }\n}"
+    ],
+    "progress": "Exercice 72 / 105"
+  },
+  "exercise_202_3": {
+    "exerciseNumber": "202.3",
+    "title": "Héritage",
+    "paragraphs": [
+      "Créez des classes qui héritent d'autres classes."
+    ],
+    "listItems": [
+      "✅ Utiliser extends pour hériter",
+      "✅ Appeler le constructeur parent avec super()",
+      "✅ Redéfinir des méthodes (override)",
+      "✅ Vérifier le type avec instanceof"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Structure :"
+      }
+    ],
+    "codeExamples": [
+      "class Animal {\n    constructor(nom) {\n        this.nom = nom;\n    }\n\n    parler() {\n        console.log(`${this.nom} fait un bruit`);\n    }\n}\n\nclass Chien extends Animal {\n    constructor(nom, race) {\n        super(nom);\n        this.race = race;\n    }\n\n    parler() {\n        console.log(`${this.nom} aboie`);\n    }\n}"
+    ],
+    "progress": "Exercice 73 / 105"
+  },
+  "exercise_202_4": {
+    "exerciseNumber": "202.4",
     "title": "Méthodes statiques",
     "paragraphs": [
       "Créez des méthodes qui appartiennent à la classe, pas aux instances."
@@ -1919,8 +2189,158 @@
     ],
     "progress": "Exercice 74 / 105"
   },
-  "exercise_203": {
-    "exerciseNumber": "203",
+  "exercise_203_1": {
+    "exerciseNumber": "203.1",
+    "title": "Comprendre le scope",
+    "paragraphs": [
+      "Analysez et comprenez la portée des variables en JavaScript.",
+      "var : Scope de fonction + hoisting let : Scope de bloc const : Scope de bloc + immutable"
+    ],
+    "listItems": [
+      "✅ Comprendre le scope global vs local",
+      "✅ Différencier var, let et const",
+      "✅ Comprendre le hoisting",
+      "✅ Maîtriser le scope de bloc"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Différences principales :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemple de problème classique :"
+      }
+    ],
+    "codeExamples": [
+      "// Avec var\nfor (var i = 0; i < 3; i++) {\n    setTimeout(() => console.log(i), 100);\n}\n// Affiche: 3, 3, 3\n\n// Avec let\nfor (let j = 0; j < 3; j++) {\n    setTimeout(() => console.log(j), 100);\n}\n// Affiche: 0, 1, 2"
+    ],
+    "progress": "Exercice 75 / 105"
+  },
+  "exercise_203_2": {
+    "exerciseNumber": "203.2",
+    "title": "Première closure",
+    "paragraphs": [
+      "Créez votre première closure pour encapsuler des données privées.",
+      "Une fonction qui conserve l'accès aux variables de son environnement parent, même après que la fonction parent ait terminé son exécution."
+    ],
+    "listItems": [
+      "✅ Comprendre le concept de closure",
+      "✅ Créer des variables privées",
+      "✅ Retourner des fonctions",
+      "✅ Maintenir l'état entre appels"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Qu'est-ce qu'une closure ?"
+      },
+      {
+        "level": "h3",
+        "text": "Exemple :"
+      }
+    ],
+    "codeExamples": [
+      "function creerCompteur() {\n    let compteur = 0;  // Variable privée\n\n    return function() {\n        compteur++;\n        return compteur;\n    };\n}\n\nconst counter = creerCompteur();\ncounter();  // 1\ncounter();  // 2"
+    ],
+    "progress": "Exercice 76 / 105"
+  },
+  "exercise_203_3": {
+    "exerciseNumber": "203.3",
+    "title": "Factory functions avec closures",
+    "paragraphs": [
+      "Créez des factory functions pour générer des objets avec données privées."
+    ],
+    "listItems": [
+      "✅ Créer des factory functions",
+      "✅ Encapsuler des données privées",
+      "✅ Exposer une API publique",
+      "✅ Valider les données"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Pattern Factory :"
+      }
+    ],
+    "codeExamples": [
+      "function creerBanque(proprietaire, solde = 0) {\n    // Variables privées\n    let _solde = solde;\n\n    // Méthodes publiques\n    return {\n        deposer(montant) {\n            if (montant > 0) {\n                _solde += montant;\n            }\n        },\n        consulter() {\n            return _solde;\n        }\n    };\n}"
+    ],
+    "progress": "Exercice 77 / 105"
+  },
+  "exercise_203_4": {
+    "exerciseNumber": "203.4",
+    "title": "IIFE (Immediately Invoked Function Expression)",
+    "paragraphs": [
+      "Utilisez les IIFE pour créer des modules isolés."
+    ],
+    "listItems": [
+      "✅ Comprendre les IIFE",
+      "✅ Créer un scope isolé",
+      "✅ Implémenter le pattern Module",
+      "✅ Éviter la pollution globale"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Syntaxe IIFE :"
+      }
+    ],
+    "codeExamples": [
+      "// IIFE classique\n(function() {\n    // Code isolé\n    const prive = \"secret\";\n})();\n\n// IIFE avec return\nconst module = (function() {\n    const prive = \"secret\";\n\n    return {\n        public: \"visible\"\n    };\n})();"
+    ],
+    "progress": "Exercice 78 / 105"
+  },
+  "exercise_203_5": {
+    "exerciseNumber": "203.5",
+    "title": "Currying et closures",
+    "paragraphs": [
+      "Transformez des fonctions en fonctions curryfiées.",
+      "Transformer une fonction à plusieurs arguments en suite de fonctions à un argument."
+    ],
+    "listItems": [
+      "✅ Comprendre le currying",
+      "✅ Créer des fonctions partiellement appliquées",
+      "✅ Utiliser pour la composition",
+      "✅ Pattern de configuration"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Qu'est-ce que le currying ?"
+      },
+      {
+        "level": "h3",
+        "text": "Exemple :"
+      }
+    ],
+    "codeExamples": [
+      "// Fonction normale\nfunction add(a, b) {\n    return a + b;\n}\n\n// Fonction curryfiée\nfunction addCurry(a) {\n    return function(b) {\n        return a + b;\n    };\n}\n\nconst add5 = addCurry(5);\nadd5(3);  // 8"
+    ],
+    "progress": "Exercice 79 / 105"
+  },
+  "exercise_203_6": {
+    "exerciseNumber": "203.6",
     "title": "Memoization avec closures",
     "paragraphs": [
       "Optimisez les calculs coûteux avec la memoization.",
@@ -1951,8 +2371,165 @@
     ],
     "progress": "Exercice 80 / 105"
   },
-  "exercise_204": {
-    "exerciseNumber": "204",
+  "exercise_204_1": {
+    "exerciseNumber": "204.1",
+    "title": "Set - Ensembles uniques",
+    "paragraphs": [
+      "Utilisez un Set pour gérer des collections d'éléments uniques et effectuer des opérations ensemblistes.",
+      "Créez des fonctions qui utilisent un Set pour :",
+      "Retourne un nouveau tableau sans doublons en utilisant un Set.",
+      "Gère les utilisateurs en ligne avec les méthodes :"
+    ],
+    "listItems": [
+      "Supprimer les doublons d'un tableau",
+      "Gérer une liste d'utilisateurs en ligne (connexion/déconnexion)",
+      "Trouver l'intersection et l'union de deux ensembles",
+      "connexion(userId) : Ajoute un utilisateur en ligne",
+      "deconnexion(userId) : Retire un utilisateur",
+      "estEnLigne(userId) : Vérifie si un utilisateur est connecté",
+      "obtenirTous() : Retourne la liste de tous les utilisateurs en ligne",
+      "union(setA, setB) : Retourne l'union de deux Sets",
+      "intersection(setA, setB) : Retourne l'intersection de deux Sets",
+      "difference(setA, setB) : Retourne la différence (éléments dans A mais pas dans B)"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Consignes"
+      },
+      {
+        "level": "h2",
+        "text": "Fonctions à implémenter"
+      },
+      {
+        "level": "h3",
+        "text": "1. supprimerDoublons(tableau)"
+      },
+      {
+        "level": "h3",
+        "text": "2. Classe GestionnaireUtilisateurs"
+      },
+      {
+        "level": "h3",
+        "text": "3. Opérations sur ensembles"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples de tests :"
+      }
+    ],
+    "codeExamples": [
+      "// Suppression de doublons\nsupprimerDoublons([1, 2, 2, 3, 3, 3, 4, 5, 5])  // [1, 2, 3, 4, 5]\nsupprimerDoublons(['a', 'b', 'a', 'c', 'b'])    // ['a', 'b', 'c']\n\n// Gestion utilisateurs\nconst manager = new GestionnaireUtilisateurs();\nmanager.connexion(\"alice\");\nmanager.connexion(\"bob\");\nmanager.estEnLigne(\"alice\")   // true\nmanager.estEnLigne(\"charlie\") // false\nmanager.obtenirTous()         // [\"alice\", \"bob\"]\n\n// Opérations sur ensembles\nconst setA = new Set([1, 2, 3, 4]);\nconst setB = new Set([3, 4, 5, 6]);\nunion(setA, setB)         // Set {1, 2, 3, 4, 5, 6}\nintersection(setA, setB)  // Set {3, 4}\ndifference(setA, setB)    // Set {1, 2}"
+    ],
+    "progress": "Exercice 81 / 105"
+  },
+  "exercise_204_2": {
+    "exerciseNumber": "204.2",
+    "title": "Map - Dictionnaires améliorés",
+    "paragraphs": [
+      "Utilisez une Map pour gérer des paires clé-valeur avec des fonctionnalités avancées.",
+      "Créez des fonctions qui utilisent une Map pour :",
+      "Créez un système de cache avec les méthodes :",
+      "Retourne une Map avec les mots et leur nombre d'occurrences.",
+      "Montrez qu'une Map peut utiliser des objets comme clés (contrairement aux objets JavaScript classiques)."
+    ],
+    "listItems": [
+      "Gérer un cache de données avec limite de taille",
+      "Compter les occurrences de mots dans un texte",
+      "Stocker des configurations avec clés d'objets",
+      "constructor(maxSize) : Initialise le cache avec une taille maximale",
+      "set(key, value) : Ajoute une valeur (supprime la plus ancienne si plein)",
+      "get(key) : Récupère une valeur",
+      "has(key) : Vérifie l'existence d'une clé",
+      "clear() : Vide le cache"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Consignes"
+      },
+      {
+        "level": "h2",
+        "text": "Fonctions à implémenter"
+      },
+      {
+        "level": "h3",
+        "text": "1. Classe Cache"
+      },
+      {
+        "level": "h3",
+        "text": "2. compterMots(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "3. Démonstration Map avec objets"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples de tests :"
+      }
+    ],
+    "codeExamples": [
+      "// Cache\nconst cache = new Cache(3);\ncache.set('user1', { name: 'Alice' });\ncache.set('user2', { name: 'Bob' });\ncache.set('user3', { name: 'Charlie' });\ncache.set('user4', { name: 'David' });  // user1 est supprimé (FIFO)\ncache.has('user1')  // false\ncache.get('user2')  // { name: 'Bob' }\n\n// Compteur de mots\nconst texte = \"le chat et le chien jouent. Le chat dort\";\nconst occurrences = compterMots(texte);\noccurrences.get('le')    // 3\noccurrences.get('chat')  // 2\n\n// Map avec objets comme clés\nconst objetA = { id: 1 };\nconst objetB = { id: 2 };\nconst metadata = new Map();\nmetadata.set(objetA, { created: '2024-01-01' });\nmetadata.set(objetB, { created: '2024-01-02' });\nmetadata.get(objetA)  // { created: '2024-01-01' }"
+    ],
+    "progress": "Exercice 82 / 105"
+  },
+  "exercise_204_3": {
+    "exerciseNumber": "204.3",
+    "title": "WeakMap et WeakSet",
+    "paragraphs": [
+      "Utilisez WeakMap et WeakSet pour gérer des données associées à des objets sans empêcher leur garbage collection.",
+      "Démontrez l'utilisation de WeakMap et WeakSet pour :",
+      "Utilisez une WeakMap pour stocker des données privées :",
+      "Note importante : Les WeakMap et WeakSet ne peuvent contenir que des objets comme clés, jamais des valeurs primitives."
+    ],
+    "listItems": [
+      "Stocker des données privées d'une classe",
+      "Gérer des métadonnées d'éléments DOM (simulation)",
+      "Marquer des objets avec un WeakSet",
+      "constructor(nom, age) : Initialise la personne",
+      "getNom() : Retourne le nom",
+      "getAge() : Retourne l'âge",
+      "ajouterSecret(secret) : Ajoute un secret",
+      "getSecrets() : Retourne les secrets",
+      "ajouterMetadata(element, meta) : Associe des métadonnées à un objet",
+      "obtenirMetadata(element) : Récupère les métadonnées",
+      "marquer(obj) : Marque un objet",
+      "estMarque(obj) : Vérifie si un objet est marqué"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Consignes"
+      },
+      {
+        "level": "h2",
+        "text": "Fonctions à implémenter"
+      },
+      {
+        "level": "h3",
+        "text": "1. Classe Personne avec données privées"
+      },
+      {
+        "level": "h3",
+        "text": "2. Système de métadonnées"
+      },
+      {
+        "level": "h3",
+        "text": "3. Marquage d'objets avec WeakSet"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples de tests :"
+      }
+    ],
+    "codeExamples": [
+      "// Données privées\nconst personne = new Personne('Alice', 25);\npersonne.ajouterSecret('J\\'aime le chocolat');\npersonne.getNom()       // 'Alice'\npersonne.getSecrets()   // ['J\\'aime le chocolat']\npersonne.nom            // undefined (données privées !)\n\n// Métadonnées\nconst element = { id: 1, type: 'button' };\najouterMetadata(element, { clicks: 0, lastClick: null });\nobtenirMetadata(element)  // { clicks: 0, lastClick: null }\n\n// Marquage\nconst obj = { id: 1 };\nmarquer(obj);\nestMarque(obj)  // true"
+    ],
+    "progress": "Exercice 83 / 105"
+  },
+  "exercise_204_4": {
+    "exerciseNumber": "204.4",
     "title": "Projet - Système de tags",
     "paragraphs": [
       "Créez un système complet de gestion de tags pour des articles en utilisant Map et Set.",
@@ -2006,52 +2583,23 @@
     ],
     "progress": "Exercice 84 / 105"
   },
-  "exercise_205": {
-    "exerciseNumber": "205",
-    "title": "Regular Expressions - Projet analyseur de logs",
+  "exercise_205_1": {
+    "exerciseNumber": "205.1",
+    "title": "Bases des RegExp",
     "paragraphs": [
-      "Créez un analyseur de fichiers de logs capable d'extraire, filtrer et analyser des entrées de logs système.",
-      "Implémentez une classe AnalyseurLogs qui permet de :",
-      "Format standard à parser :",
-      "Niveaux de log supportés : INFO, ERROR, WARN, DEBUG",
-      "Parse une ligne de log et retourne un objet :",
-      "Met à jour les statistiques après ajout d'un log.",
-      "Analyse un fichier complet (chaîne multi-lignes).",
-      "Retourne tous les logs d'un niveau spécifique.",
-      "Retourne tous les logs d'une IP spécifique.",
-      "Retourne les logs entre deux dates.",
-      "Recherche un motif (regex) dans les messages.",
-      "Retourne les IPs les plus actives.",
-      "Affiche un rapport complet dans la console :"
+      "Créez des expressions régulières pour rechercher, tester et extraire des motifs dans du texte.",
+      "Démontrez l'utilisation des expressions régulières pour :",
+      "Retourne true si le motif existe dans le texte (insensible à la casse).",
+      "Extrait tous les mots commençant par un préfixe donné (ex: tous les mots en \"ch\").",
+      "Remplace toutes les occurrences d'un motif par un nouveau texte.",
+      "Divise une chaîne de nombres séparés par des virgules (avec espaces variables) en tableau."
     ],
     "listItems": [
-      "Parser des lignes de logs au format standard",
-      "Extraire les informations : timestamp, niveau, IP, message",
-      "Générer des statistiques sur les logs",
-      "Filtrer et rechercher dans les logs",
-      "Générer un rapport d'analyse",
-      "logs : tableau des logs parsés",
-      "stats : objet contenant les statistiques\ntotal : nombre total de logs\nparNiveau : compteur par niveau (INFO, ERROR, etc.)\nparIP : compteur par adresse IP\nerreurs : tableau des erreurs uniquement",
-      "total : nombre total de logs",
-      "parNiveau : compteur par niveau (INFO, ERROR, etc.)",
-      "parIP : compteur par adresse IP",
-      "erreurs : tableau des erreurs uniquement",
-      "Split par lignes",
-      "Parse chaque ligne",
-      "Retourne les statistiques finales",
-      "Paramètres : objets Date",
-      "Recherche insensible à la casse",
-      "Format : [{ ip: string, count: number }, ...]",
-      "Trié par ordre décroissant",
-      "Total d'entrées",
-      "Répartition par niveau (avec pourcentages)",
-      "Top 5 des IPs",
-      "Dernières erreurs",
-      "Regex pour parser le format complexe avec groupes de capture",
-      "Gestion des dates avec new Date()",
-      "Agregé des statistiques (compteurs, totaux)",
-      "Méthodes de filtrage et recherche",
-      "Formatage et présentation des données"
+      "Créer des RegExp avec les deux syntaxes (littéral et constructeur)",
+      "Tester la présence d'un motif avec .test()",
+      "Extraire des correspondances avec .match() et .exec()",
+      "Remplacer du texte avec .replace()",
+      "Diviser une chaîne avec .split()"
     ],
     "headings": [
       {
@@ -2060,42 +2608,278 @@
       },
       {
         "level": "h2",
-        "text": "Format des logs"
-      },
-      {
-        "level": "h2",
-        "text": "Classe à implémenter"
+        "text": "Fonctions à implémenter"
       },
       {
         "level": "h3",
-        "text": "AnalyseurLogs"
+        "text": "1. testMotif(texte, motif)"
       },
       {
-        "level": "h4",
-        "text": "Propriétés"
+        "level": "h3",
+        "text": "2. extraireMots(texte, prefixe)"
       },
       {
-        "level": "h4",
-        "text": "Méthodes"
+        "level": "h3",
+        "text": "3. remplacerMotif(texte, ancien, nouveau)"
+      },
+      {
+        "level": "h3",
+        "text": "4. diviserProprement(texte)"
       },
       {
         "level": "h3",
         "text": "Exemples de tests :"
-      },
-      {
-        "level": "h2",
-        "text": "Points clés à implémenter"
       }
     ],
     "codeExamples": [
-      "[2024-01-15 10:30:45] [INFO] 192.168.1.1 - Message du log\n[YYYY-MM-DD HH:MM:SS] [NIVEAU] IP_ADDRESS - MESSAGE",
-      "{\n  timestamp: Date,\n  niveau: string,\n  ip: string,\n  message: string\n}",
-      "const analyseur = new AnalyseurLogs();\n\nconst logs = `\n[2024-01-15 10:30:45] [INFO] 192.168.1.100 - Utilisateur connecté\n[2024-01-15 10:31:12] [ERROR] 192.168.1.101 - Erreur de connexion BDD\n[2024-01-15 10:32:00] [WARN] 192.168.1.100 - Tentative échouée\n[2024-01-15 10:33:15] [INFO] 192.168.1.102 - Requête GET /api/users\n`;\n\nconst stats = analyseur.analyserFichier(logs);\n// stats.total === 4\n// stats.parNiveau.INFO === 2\n// stats.parNiveau.ERROR === 1\n\nanalyseur.genererRapport();\n// Affiche rapport formaté dans la console\n\n// Filtres\nconst erreurs = analyseur.filtrerParNiveau('ERROR');\n// [{ timestamp: Date(...), niveau: 'ERROR', ... }]\n\nconst ip100 = analyseur.filtrerParIP('192.168.1.100');\n// Tous les logs de cette IP\n\n// Recherche\nconst connexions = analyseur.rechercherMotif('connexion');\n// Trouve tous les logs mentionnant \"connexion\"\n\n// Top IPs\nconst topIPs = analyseur.obtenirTopIPs(3);\n// [{ ip: '192.168.1.100', count: 2 }, ...]"
+      "// Test de motif\ntestMotif(\"Hello World\", \"hello\")  // true (insensible à la casse)\ntestMotif(\"Bonjour\", \"hello\")      // false\n\n// Extraction\nextraireMots(\"Les chats et les chiens jouent\", \"ch\")  // [\"chats\", \"chiens\"]\nextraireMots(\"Le soleil brille\", \"br\")                // [\"brille\"]\n\n// Remplacement\nremplacerMotif(\"Les pommes et les pommes\", \"pommes\", \"oranges\")\n// \"Les oranges et les oranges\"\n\n// Division\ndiviserProprement(\"1, 2,  3,4,   5\")  // [\"1\", \"2\", \"3\", \"4\", \"5\"]\n\n// Métacaractères de base\nconst regex1 = /h.t/;        // . = n'importe quel caractère (hat, hit, hot)\nconst regex2 = /^Hello/;     // ^ = début de chaîne\nconst regex3 = /world$/;     // $ = fin de chaîne\nconst regex4 = /bo*k/;       // * = 0 ou plus (bk, bok, book)\nconst regex5 = /bo+k/;       // + = 1 ou plus (bok, book)\nconst regex6 = /colou?r/;    // ? = 0 ou 1 (color, colour)\nconst regex7 = /\\d+/;        // \\d = chiffre\nconst regex8 = /\\w+/;        // \\w = mot (lettre, chiffre, _)\nconst regex9 = /\\s/;         // \\s = espace blanc"
     ],
+    "progress": "Exercice 85 / 105"
+  },
+  "exercise_205_2": {
+    "exerciseNumber": "205.2",
+    "title": "Validation de données",
+    "paragraphs": [
+      "Créez des validateurs pour différents types de données en utilisant des expressions régulières.",
+      "Créez des fonctions de validation pour :",
+      "Retourne true si l'email est valide.",
+      "Accepte les formats : 0123456789, 01 23 45 67 89, 01.23.45.67.89, +33123456789",
+      "Vérifie que le code postal est composé de 5 chiffres.",
+      "Vérifie :",
+      "Retourne un objet avec { valide: boolean, details: {...} }",
+      "Vérifie que l'URL commence par http:// ou https://",
+      "Accepte #RGB (3 caractères) ou #RRGGBB (6 caractères)."
+    ],
+    "listItems": [
+      "Adresses email (format standard)",
+      "Téléphones français (différents formats)",
+      "Codes postaux français (5 chiffres)",
+      "Mots de passe forts (avec règles de sécurité)",
+      "URLs (http/https)",
+      "Couleurs hexadécimales (#RGB ou #RRGGBB)",
+      "Au moins 8 caractères",
+      "Au moins 1 majuscule",
+      "Au moins 1 minuscule",
+      "Au moins 1 chiffre",
+      "Au moins 1 caractère spécial"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Consignes"
+      },
+      {
+        "level": "h2",
+        "text": "Fonctions à implémenter"
+      },
+      {
+        "level": "h3",
+        "text": "1. validerEmail(email)"
+      },
+      {
+        "level": "h3",
+        "text": "2. validerTelephoneFR(tel)"
+      },
+      {
+        "level": "h3",
+        "text": "3. validerCodePostal(cp)"
+      },
+      {
+        "level": "h3",
+        "text": "4. validerMotDePasse(mdp)"
+      },
+      {
+        "level": "h3",
+        "text": "5. validerURL(url)"
+      },
+      {
+        "level": "h3",
+        "text": "6. validerCouleurHex(couleur)"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples de tests :"
+      }
+    ],
+    "codeExamples": [
+      "// Email\nvaliderEmail('test@example.com')     // true\nvaliderEmail('invalide')             // false\nvaliderEmail('test @example.com')    // false\n\n// Téléphone\nvaliderTelephoneFR('0123456789')     // true\nvaliderTelephoneFR('01 23 45 67 89') // true\nvaliderTelephoneFR('+33123456789')   // true\nvaliderTelephoneFR('123456')         // false\n\n// Code postal\nvaliderCodePostal('75001')  // true\nvaliderCodePostal('1234')   // false\n\n// Mot de passe\nvaliderMotDePasse('Abc123!@')\n// { valide: true, details: { longueur: true, majuscule: true, ... } }\n\nvaliderMotDePasse('faible')\n// { valide: false, details: { longueur: false, majuscule: false, ... } }\n\n// URL\nvaliderURL('https://example.com')        // true\nvaliderURL('http://sub.example.com/path') // true\nvaliderURL('invalide')                   // false\n\n// Couleur hexadécimale\nvaliderCouleurHex('#FF5733')  // true\nvaliderCouleurHex('#F57')     // true\nvaliderCouleurHex('FF5733')   // false (manque #)"
+    ],
+    "progress": "Exercice 86 / 105"
+  },
+  "exercise_205_3": {
+    "exerciseNumber": "205.3",
+    "title": "Regular Expressions - Extraction et manipulation",
+    "paragraphs": [
+      "Utilisez les expressions régulières pour extraire et manipuler différents types de données dans des chaînes de caractères.",
+      "Créez des fonctions qui utilisent des RegExp pour :",
+      "Extrait tous les hashtags d'un texte.",
+      "Extrait toutes les mentions @username d'un texte.",
+      "Extrait toutes les URLs (http et https) d'un texte.",
+      "Extrait les dates au format DD/MM/YYYY.",
+      "Extrait les prix avec le symbole €.",
+      "Parse les coordonnées GPS (latitude, longitude).",
+      "Masque les adresses email pour l'anonymisation.",
+      "Formate un numéro de téléphone.",
+      "Extrait et convertit les couleurs hexadécimales en RGB."
+    ],
+    "listItems": [
+      "Extraire des hashtags d'un tweet",
+      "Extraire des mentions (@username)",
+      "Extraire des URLs (http/https)",
+      "Extraire des dates (format DD/MM/YYYY)",
+      "Extraire des prix (format avec €)",
+      "Parser des coordonnées GPS",
+      "Masquer des emails (anonymisation)",
+      "Formater des numéros de téléphone",
+      "Analyser des couleurs CSS (hex vers rgb)",
+      "Supporte les caractères accentués",
+      "Retourne un tableau vide si aucun hashtag",
+      "Retourne un tableau de mentions",
+      "Retourne un tableau d'objets avec : { complete, jour, mois, annee }",
+      "Supporte les formats : 49,99€ et 15.50€",
+      "Retourne un tableau de nombres (float)",
+      "Format : 48.8566, 2.3522",
+      "Retourne : { latitude: number, longitude: number }",
+      "alice@example.com devient a***@example.com",
+      "Utilise .replace() avec callback",
+      "0123456789 devient 01 23 45 67 89",
+      "Retourne : { hex: string, rgb: string }"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Consignes"
+      },
+      {
+        "level": "h2",
+        "text": "Fonctions à implémenter"
+      },
+      {
+        "level": "h3",
+        "text": "1. extraireHashtags(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "2. extraireMentions(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "3. extraireURLs(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "4. extraireDates(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "5. extrairePrix(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "6. extraireCoordonnees(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "7. masquerEmails(texte)"
+      },
+      {
+        "level": "h3",
+        "text": "8. formaterTelephone(numero)"
+      },
+      {
+        "level": "h3",
+        "text": "9. analyserCSS(css)"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples de tests :"
+      }
+    ],
+    "codeExamples": [
+      "// Hashtags\nextraireHashtags(\"J'adore #JavaScript et #WebDev ! #code2024\")\n// ['#JavaScript', '#WebDev', '#code2024']\n\n// Mentions\nextraireMentions(\"Salut @alice et @bob, regardez ça !\")\n// ['@alice', '@bob']\n\n// URLs\nextraireURLs(\"Visitez https://example.com et http://test.fr\")\n// ['https://example.com', 'http://test.fr']\n\n// Dates\nextraireDates(\"Réunion le 15/01/2024 et 20/03/2024\")\n// [{ complete: '15/01/2024', jour: '15', mois: '01', annee: '2024' }, ...]\n\n// Prix\nextrairePrix(\"Total: 49,99€ + 15.50€ de livraison\")\n// [49.99, 15.50]\n\n// Coordonnées GPS\nextraireCoordonnees(\"Paris: 48.8566, 2.3522 | Lyon: 45.7640, 4.8357\")\n// [{ latitude: 48.8566, longitude: 2.3522 }, ...]\n\n// Masquer emails\nmasquerEmails(\"Contactez alice@example.com ou bob@test.fr\")\n// \"Contactez a***@example.com ou b***@test.fr\"\n\n// Formater téléphone\nformaterTelephone('0123456789')\n// \"01 23 45 67 89\"\n\n// Analyser CSS\nanalyserCSS(\"color: #FF5733; background: #3498DB;\")\n// [{ hex: '#FF5733', rgb: 'rgb(255, 87, 51)' }, ...]"
+    ],
+    "progress": "Exercice 87 / 105"
+  },
+  "exercise_205_4": {
+    "exerciseNumber": "205.4",
+    "title": "No title",
+    "paragraphs": [],
+    "listItems": [],
+    "headings": [],
+    "codeExamples": [],
     "progress": "Exercice 88 / 105"
   },
-  "exercise_206": {
-    "exerciseNumber": "206",
+  "exercise_206_1": {
+    "exerciseNumber": "206.1",
+    "title": "Créer un intervalle",
+    "paragraphs": [
+      "Implémentez une fonction qui crée un objet représentant un intervalle numérique avec un point de départ et un point d'arrivée."
+    ],
+    "listItems": [
+      "✅ Utiliser la syntaxe des objets littéraux",
+      "✅ Comprendre les propriétés raccourcies ES6",
+      "✅ Découvrir la validation de données",
+      "✅ Maîtriser la création d'objets simples"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Exemples :"
+      }
+    ],
+    "codeExamples": [
+      "createInterval(1, 5)    // { start: 1, end: 5 }\ncreateInterval(10, 20)  // { start: 10, end: 20 }\ncreateInterval(-5, 0)   // { start: -5, end: 0 }"
+    ],
+    "progress": "Exercice 89 / 105"
+  },
+  "exercise_206_2": {
+    "exerciseNumber": "206.2",
+    "title": "206.2 - Question",
+    "paragraphs": [
+      "Créer une fonction mergeIntervals(interval1, interval2) qui fusionne deux intervalles et retourne le nouvel intervalle englobant.",
+      "Exemples :"
+    ],
+    "listItems": [],
+    "headings": [],
+    "codeExamples": [
+      "mergeIntervals({start: 1, end: 5}, {start: 3, end: 8}) // { start: 1, end: 8 }\nmergeIntervals({start: 10, end: 15}, {start: 5, end: 12}) // { start: 5, end: 15 }\nmergeIntervals({start: 0, end: 3}, {start: 7, end: 10}) // { start: 0, end: 10 }"
+    ],
+    "progress": "Exercice 90 / 105"
+  },
+  "exercise_206_3": {
+    "exerciseNumber": "206.3",
+    "title": "206.3 - Question",
+    "paragraphs": [
+      "Créer une fonction isInInterval(point, interval) qui vérifie si un point numérique est dans un intervalle (inclus).",
+      "Exemples :"
+    ],
+    "listItems": [],
+    "headings": [],
+    "codeExamples": [
+      "isInInterval(3, {start: 1, end: 5}) // true\nisInInterval(7, {start: 1, end: 5}) // false\nisInInterval(1, {start: 1, end: 5}) // true (borne incluse)\nisInInterval(5, {start: 1, end: 5}) // true (borne incluse)"
+    ],
+    "progress": "Exercice 91 / 105"
+  },
+  "exercise_206_4": {
+    "exerciseNumber": "206.4",
+    "title": "206.4 - Question",
+    "paragraphs": [
+      "Créer une fonction intervalLength(interval) qui calcule la longueur d'un intervalle.",
+      "Exemples :"
+    ],
+    "listItems": [],
+    "headings": [],
+    "codeExamples": [
+      "intervalLength({start: 1, end: 5}) // 4\nintervalLength({start: 10, end: 20}) // 10\nintervalLength({start: -5, end: 5}) // 10\nintervalLength({start: 0, end: 0}) // 0"
+    ],
+    "progress": "Exercice 92 / 105"
+  },
+  "exercise_206_5": {
+    "exerciseNumber": "206.5",
     "title": "206.5 - Question",
     "paragraphs": [
       "Créer une fonction splitInterval(interval, n) qui divise un intervalle en n segments égaux et retourne un tableau des points de division.",
@@ -2108,8 +2892,89 @@
     ],
     "progress": "Exercice 93 / 105"
   },
-  "exercise_207": {
-    "exerciseNumber": "207",
+  "exercise_207_1": {
+    "exerciseNumber": "207.1",
+    "title": "Système de préférences avec LocalStorage",
+    "paragraphs": [
+      "Créez un système de gestion des préférences utilisateur qui persiste les données avec LocalStorage."
+    ],
+    "listItems": [
+      "✅ Utiliser LocalStorage pour sauvegarder des données",
+      "✅ Comprendre la sérialisation JSON",
+      "✅ Gérer les erreurs (quota, parsing)",
+      "✅ Différencier LocalStorage et SessionStorage"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "// Wrapper pour LocalStorage\nclass Storage {\n  static set(key, value)    // Sauvegarder\n  static get(key, default)  // Récupérer\n  static remove(key)        // Supprimer\n  static clear()            // Tout supprimer\n}\n\n// Gestion des préférences\nclass UserPreferences {\n  load()              // Charger les préférences\n  save()              // Sauvegarder\n  set(key, value)     // Modifier une préférence\n  get(key)            // Lire une préférence\n  reset()             // Réinitialiser\n}"
+    ],
+    "progress": "Exercice 94 / 105"
+  },
+  "exercise_207_2": {
+    "exerciseNumber": "207.2",
+    "title": "Gestionnaire de cookies",
+    "paragraphs": [
+      "Créez un gestionnaire de cookies complet avec expiration, sécurité et conformité RGPD."
+    ],
+    "listItems": [
+      "✅ Créer, lire et supprimer des cookies",
+      "✅ Gérer l'expiration (expires, max-age)",
+      "✅ Utiliser les flags de sécurité (secure, sameSite)",
+      "✅ Implémenter un système de consentement RGPD"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "class CookieManager {\n  static set(name, value, options)  // Créer un cookie\n  static get(name)                   // Lire un cookie\n  static remove(name)                // Supprimer un cookie\n  static has(name)                   // Vérifier l'existence\n  static getAll()                    // Tous les cookies\n}\n\nclass CookieConsent {\n  hasConsent()      // Vérifier le consentement\n  giveConsent()     // Donner le consentement\n  revokeConsent()   // Révoquer le consentement\n}"
+    ],
+    "progress": "Exercice 95 / 105"
+  },
+  "exercise_207_3": {
+    "exerciseNumber": "207.3",
+    "title": "API de géolocalisation",
+    "paragraphs": [
+      "Utilisez l'API Geolocation pour obtenir et suivre la position de l'utilisateur, et calculer des distances."
+    ],
+    "listItems": [
+      "✅ Obtenir la position actuelle de l'utilisateur",
+      "✅ Suivre la position en temps réel (watchPosition)",
+      "✅ Calculer la distance entre deux points (Haversine)",
+      "✅ Gérer les permissions et erreurs"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "class GeoLocation {\n  async getCurrentPosition(options)  // Position actuelle\n  watchPosition(callback, error)     // Suivi temps réel\n  clearWatch()                        // Arrêter le suivi\n  static calculateDistance(...)       // Distance en km\n}\n\nclass ProximityFinder {\n  async findNearby(places, maxDist)  // Trouver à proximité\n}"
+    ],
+    "progress": "Exercice 96 / 105"
+  },
+  "exercise_207_4": {
+    "exerciseNumber": "207.4",
     "title": "Notifications desktop",
     "paragraphs": [
       "Créez un système de notifications desktop avec gestion des permissions et queue de notifications."
@@ -2135,8 +3000,89 @@
     ],
     "progress": "Exercice 97 / 105"
   },
-  "exercise_208": {
-    "exerciseNumber": "208",
+  "exercise_208_1": {
+    "exerciseNumber": "208.1",
+    "title": "Création et formatage de dates",
+    "paragraphs": [
+      "Créez et formatez des dates en JavaScript avec différentes méthodes natives et personnalisées."
+    ],
+    "listItems": [
+      "✅ Créer des dates (new Date, timestamp, composants)",
+      "✅ Utiliser les méthodes get/set (getFullYear, setMonth, etc.)",
+      "✅ Formater avec toLocaleString et méthodes natives",
+      "✅ Créer un formateur personnalisé (DD/MM/YYYY, etc.)"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "class DateFormatter {\n  static format(date, format)      // Format personnalisé\n  static formatRelative(date)      // \"Il y a X minutes\"\n}\n\n// Créer des dates\nnew Date()                    // Maintenant\nnew Date('2024-01-15')       // String\nnew Date(2024, 0, 15)        // Composants\nDate.now()                    // Timestamp"
+    ],
+    "progress": "Exercice 98 / 105"
+  },
+  "exercise_208_2": {
+    "exerciseNumber": "208.2",
+    "title": "Calculs et comparaisons de dates",
+    "paragraphs": [
+      "Effectuez des calculs et comparaisons entre dates (différences, ajouts, soustractions)."
+    ],
+    "listItems": [
+      "✅ Calculer la différence entre dates (jours, heures, etc.)",
+      "✅ Ajouter/soustraire du temps (jours, mois, années)",
+      "✅ Obtenir le début/fin de période (jour, mois, année)",
+      "✅ Comparer des dates (isBefore, isAfter, isBetween)"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "class DateUtils {\n  static diff(date1, date2, unit)      // Différence\n  static add(date, amount, unit)       // Ajouter\n  static subtract(date, amount, unit)  // Soustraire\n  static startOf(date, unit)           // Début de période\n  static endOf(date, unit)             // Fin de période\n  static isBetween(date, start, end)   // Entre deux dates\n  static isToday(date)                 // Est aujourd'hui\n}"
+    ],
+    "progress": "Exercice 99 / 105"
+  },
+  "exercise_208_3": {
+    "exerciseNumber": "208.3",
+    "title": "Fuseaux horaires et UTC",
+    "paragraphs": [
+      "Gérez les fuseaux horaires, convertissez entre UTC et heure locale, et effectuez des calculs précis."
+    ],
+    "listItems": [
+      "✅ Comprendre UTC vs heure locale",
+      "✅ Utiliser les méthodes UTC (getUTCHours, etc.)",
+      "✅ Convertir entre fuseaux horaires avec toLocaleString",
+      "✅ Calculer avec getTimezoneOffset()"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "class TimezoneConverter {\n  static toTimezone(date, timezone)    // Convertir\n  static format(date, timezone)        // Formater\n  static getOffset(date, timezone)     // Obtenir offset\n  static compare(date, timezones)      // Comparer\n}\n\nclass FlightDuration {\n  getDuration()  // Calculer durée avec fuseaux\n}"
+    ],
+    "progress": "Exercice 100 / 105"
+  },
+  "exercise_208_4": {
+    "exerciseNumber": "208.4",
     "title": "Calendrier et planificateur",
     "paragraphs": [
       "Créez un système complet de calendrier avec gestion d'événements, détection de conflits et affichage."
@@ -2162,8 +3108,89 @@
     ],
     "progress": "Exercice 101 / 105"
   },
-  "exercise_209": {
-    "exerciseNumber": "209",
+  "exercise_209_1": {
+    "exerciseNumber": "209.1",
+    "title": "Fonction Debounce",
+    "paragraphs": [
+      "Implémentez une fonction debounce pour retarder l'exécution jusqu'à la fin des invocations rapides."
+    ],
+    "listItems": [
+      "✅ Créer une fonction debounce de base",
+      "✅ Gérer les arguments et le contexte (this)",
+      "✅ Ajouter les options immediate, cancel, flush",
+      "✅ Comprendre les cas d'usage (recherche, validation, auto-save)"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "function debounce(func, delay)         // Basique\nfunction debounceImmediate(...)        // Avec option immediate\nfunction createDebouncedFunction(...)  // Avec cancel/flush\n\n// Cas d'usage\n- Recherche en temps réel\n- Validation de formulaire\n- Sauvegarde automatique\n- Resize/scroll handlers"
+    ],
+    "progress": "Exercice 102 / 105"
+  },
+  "exercise_209_2": {
+    "exerciseNumber": "209.2",
+    "title": "Fonction Throttle",
+    "paragraphs": [
+      "Implémentez une fonction throttle pour limiter la fréquence d'exécution (maximum 1 fois par période)."
+    ],
+    "listItems": [
+      "✅ Créer une fonction throttle de base",
+      "✅ Comprendre leading (début) et trailing (fin)",
+      "✅ Gérer le contexte et les arguments",
+      "✅ Différencier debounce vs throttle"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "function throttle(func, limit)         // Basique\nfunction throttleAdvanced(...)         // Avec options leading/trailing\nfunction createThrottledFunction(...)  // Avec cancel\n\n// Cas d'usage\n- Scroll events\n- Resize window\n- Mouse move tracking\n- Bouton anti-spam"
+    ],
+    "progress": "Exercice 103 / 105"
+  },
+  "exercise_209_3": {
+    "exerciseNumber": "209.3",
+    "title": "Memoization et cache",
+    "paragraphs": [
+      "Implémentez la memoization pour cacher les résultats de fonctions coûteuses et optimiser les performances."
+    ],
+    "listItems": [
+      "✅ Créer une fonction memoize de base",
+      "✅ Gérer la limite de taille du cache (FIFO)",
+      "✅ Ajouter une expiration (TTL)",
+      "✅ Créer une classe MemoCache avec statistiques"
+    ],
+    "headings": [
+      {
+        "level": "h2",
+        "text": "Objectifs :"
+      },
+      {
+        "level": "h3",
+        "text": "Fonctionnalités à implémenter :"
+      }
+    ],
+    "codeExamples": [
+      "function memoize(func)                    // Basique\nfunction memoizeWithLimit(func, maxSize)  // Limite\nfunction memoizeWithExpiry(func, ttl)     // Expiration\n\nclass MemoCache {\n  get(key)      // Récupérer\n  set(key, val) // Stocker\n  getStats()    // Statistiques hits/misses\n}"
+    ],
+    "progress": "Exercice 104 / 105"
+  },
+  "exercise_209_4": {
+    "exerciseNumber": "209.4",
     "title": "Lazy Loading et optimisations",
     "paragraphs": [
       "Implémentez le chargement paresseux d'images, de modules et l'infinite scroll pour optimiser les performances."

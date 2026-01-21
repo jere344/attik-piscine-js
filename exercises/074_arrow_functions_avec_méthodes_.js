@@ -1,6 +1,6 @@
 /*
  * Exercise 074: Arrow functions avec méthodes de tableau
- * Exercice 29 / 61
+ * Exercice 29 / 105
  * ============================================================
  */
 

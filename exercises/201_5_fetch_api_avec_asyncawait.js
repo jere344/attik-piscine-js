@@ -1,5 +1,5 @@
 /*
- * Exercise 201: Fetch API avec async/await
+ * Exercise 201.5: Fetch API avec async/await
  * Exercice 70 / 105
  * ============================================================
  */

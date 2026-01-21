@@ -12,7 +12,7 @@
 (async function extractAllQuestions() {
     const allQuestions = {};
     const totalExercises = 105  ;
-    const start_at = 61 ;
+    const start_at = 1 ;
     
     console.log('%c🚀 Starting extraction of all JavaScript questions...', 'color: #00ff00; font-size: 16px; font-weight: bold');
     console.log(`Total exercises to extract: ${totalExercises}\n`);
@@ -21,15 +21,29 @@
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     
+    async function waitForPageChange(previousExerciseNum, maxWaitMs = 10000) {
+        const startTime = Date.now();
+        while (Date.now() - startTime < maxWaitMs) {
+            await sleep(100);
+            const currentQuestion = extractCurrentQuestion();
+            if (currentQuestion && currentQuestion.exerciseNumber !== previousExerciseNum) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
     function extractCurrentQuestion() {
         try {
-            // Get exercise number
+            // Get exercise number from H2 title
             const exerciseTitle = document.querySelector('h2[id^="exercice"]');
             if (!exerciseTitle) {
                 return null;
             }
             
-            const exerciseNumMatch = exerciseTitle.textContent.match(/Exercice\s+(\d+)/i);
+            // Extract exercise number (can be "123" or "200.3" format)
+            // Match pattern: "Exercice" followed by numbers and optional dot+numbers
+            const exerciseNumMatch = exerciseTitle.textContent.match(/Exercice\s+([\d.]+)/i);
             const exerciseNum = exerciseNumMatch ? exerciseNumMatch[1] : 'unknown';
             
             // Get the question tab content (should be visible by default)
@@ -41,6 +55,10 @@
             // Extract the main title (h1)
             const mainTitle = questionTab.querySelector('h1');
             const title = mainTitle ? mainTitle.textContent.trim() : 'No title';
+            
+            // Get progress indicator
+            const progressText = document.querySelector('[data-testid="stCaptionContainer"] p');
+            const progress = progressText ? progressText.textContent.trim() : '';
             
             // Extract paragraphs
             const paragraphs = [];
@@ -90,10 +108,6 @@
                 }
             });
             
-            // Extract progress indicator
-            const progressText = document.querySelector('[data-testid="stCaptionContainer"] p');
-            const progress = progressText ? progressText.textContent.trim() : '';
-            
             return {
                 exerciseNumber: exerciseNum,
                 title: title,
@@ -125,14 +139,14 @@
     
     // Extract all questions
     for (let i = start_at; i <= totalExercises; i++) {
-        await sleep(1500); // Wait for page to render
+        await sleep(300); // Small initial delay
         
         const questionData = extractCurrentQuestion();
         
         if (questionData) {
-            const key = `exercise_${questionData.exerciseNumber.padStart(3, '0')}`;
+            const key = `exercise_${questionData.exerciseNumber.replace('.', '_').padStart(3, '0')}`;
             allQuestions[key] = questionData;
-            console.log(`%c✓ ${i}/${totalExercises}: ${questionData.title}`, 'color: #00cc00');
+            console.log(`%c✓ ${i}/${totalExercises}: [${questionData.exerciseNumber}] ${questionData.title}`, 'color: #00cc00');
         } else {
             console.error(`%c✗ Failed to extract exercise ${i}`, 'color: #ff0000');
         }
@@ -144,7 +158,14 @@
                 console.error(`%c⚠ Could not find Next button. Stopping at exercise ${i}.`, 'color: #ff9900');
                 break;
             }
-            await sleep(500);
+            
+            // Wait for the page to change to next exercise
+            const currentExerciseNum = questionData ? questionData.exerciseNumber : null;
+            const pageChanged = await waitForPageChange(currentExerciseNum, 10000);
+            
+            if (!pageChanged) {
+                console.error(`%c⚠ Timeout waiting for next exercise after ${currentExerciseNum}`, 'color: #ff9900');
+            }
         }
     }
     

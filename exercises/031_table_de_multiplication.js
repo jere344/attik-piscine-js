@@ -1,6 +1,6 @@
 /*
  * Exercise 031: Table de multiplication
- * Exercice 9 / 61
+ * Exercice 9 / 105
  * ============================================================
  */
 

@@ -1,6 +1,6 @@
 /*
  * Exercise 084: Spread operator avec objets
- * Exercice 33 / 61
+ * Exercice 33 / 105
  * ============================================================
  */
 

@@ -1,5 +1,5 @@
 /*
- * Exercise 207: Notifications desktop
+ * Exercise 207.4: Notifications desktop
  * Exercice 97 / 105
  * ============================================================
  */

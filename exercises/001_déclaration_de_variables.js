@@ -1,6 +1,6 @@
 /*
  * Exercise 001: Déclaration de variables
- * Exercice 1 / 61
+ * Exercice 1 / 105
  * ============================================================
  */
 
