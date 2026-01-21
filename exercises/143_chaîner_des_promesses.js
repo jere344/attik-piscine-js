@@ -43,3 +43,48 @@
 // TODO: Write your solution below
 
 // Your code here
+function etape1() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Étape 1 terminée");
+            resolve(1);
+        }, 1000);
+    });
+}
+
+function etape2(valeur) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Étape 2 terminée");
+            resolve(valeur + 2);
+        }, 1000);
+    });
+}
+function etape3(valeur) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Étape 3 terminée");
+            resolve(valeur + 3);
+        }, 1000);
+    });
+}
+
+etape1()
+    .then(resultat1 => {
+        return etape2(resultat1);
+    })
+    .then(resultat2 => {
+        return etape3(resultat2);
+    })
+    .then(resultatFinal => {
+        console.log('Terminé:', resultatFinal);
+    })
+    .catch(erreur => {
+        console.error('Erreur:', erreur);
+    })
+    .finally(() => {
+        console.log('Chaîne de Promesses terminée');
+    });
+
+
+    

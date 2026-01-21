@@ -41,3 +41,21 @@
 // TODO: Write your solution below
 
 // Your code here
+
+const calculerPrixTTC = (prixHT, tauxTVA) => {
+    const montantTVA = prixHT * tauxTVA;
+    const prixTTC = prixHT + montantTVA;
+    return `Prix HT: ${prixHT}€, TVA: ${montantTVA}€, Prix TTC: ${prixTTC}€`;
+}
+
+const afficherProduit = (nom, prix, stock) => {
+    if (stock > 0) {
+        return `Produit: ${nom} - Prix: ${prix}€ - En stock: ${stock}`;
+    } else {
+        return `Produit: ${nom} - Rupture de stock`;
+    }
+}
+// Tests
+console.log(calculerPrixTTC(100, 0.20));
+console.log(afficherProduit("Laptop", 999, 5));
+console.log(afficherProduit("Clavier", 49, 0));

@@ -50,6 +50,17 @@
 
 // TODO: Implement the function below
 
-function functionName() {
-    // Your code here
+async function chargerDonnees() {
+    try {
+        const response = await fetch('/api/data');
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (erreur) {
+        console.error(erreur);
+    }
 }
+
+
+chargerDonnees();
+

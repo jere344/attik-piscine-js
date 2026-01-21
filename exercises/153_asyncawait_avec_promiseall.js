@@ -38,3 +38,44 @@
 // TODO: Write your solution below
 
 // Your code here
+
+async function chargerUtilisateur() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({ id: 1, nom: 'Alice' });
+        }, 1000);
+    });
+}
+
+async function chargerPosts() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([{ id: 1, titre: 'Post 1' }, { id: 2, titre: 'Post 2' }]);
+        }, 1000);
+    });
+}
+
+async function chargerComments() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve([{ id: 1, contenu: 'Commentaire 1' }, { id: 2, contenu: 'Commentaire 2' }]);
+        }, 1000);
+    });
+}
+
+async function chargerDonneesEnParallele() {
+    try {
+        const [user, posts, comments] = await Promise.all([
+            chargerUtilisateur(),
+            chargerPosts(),
+            chargerComments()
+        ]);
+        console.log('Utilisateur:', user);
+        console.log('Posts:', posts);
+        console.log('Commentaires:', comments);
+    } catch (erreur) {
+        console.error('Erreur lors du chargement des données:', erreur);
+    }
+}
+
+chargerDonneesEnParallele();

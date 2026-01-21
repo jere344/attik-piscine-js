@@ -42,3 +42,21 @@
 // TODO: Write your solution below
 
 // Your code here
+
+const recupererDonnees = async (url) => {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (erreur) {
+        console.error('Erreur:', erreur);
+    }
+};
+
+const URL = 'https://jsonplaceholder.typicode.com/users';
+recupererDonnees(URL);
+
+

@@ -41,3 +41,34 @@
 // TODO: Write your solution below
 
 // Your code here
+
+const recupererDonnees = async (url, retries = 3, timeout = 5000) => {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeout);
+    try {
+        const response = await fetch(url, { signal: controller.signal });
+        clearTimeout(id);
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (erreur) {
+        if (erreur.name === 'AbortError') {
+            console.error('Erreur: Requête trop longue (timeout)');
+        } else if (erreur.name === 'TypeError') {
+            console.error('Erreur: Pas de connexion réseau');
+        }
+        else {
+            console.error('Erreur:', erreur);
+        }
+        if (retries > 0) {
+            console.log(`Nouvelle tentative... (${retries} restants)`);
+            return recupererDonnees(url, retries - 1, timeout);
+        }
+    }
+};
+
+const URL = 'https://jsonplaceholder.typicode.com/users';
+recupererDonnees(URL);
