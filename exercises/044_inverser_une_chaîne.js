@@ -34,7 +34,7 @@ function reverseString(str) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Exercise 044: Inverser une chaîne', [

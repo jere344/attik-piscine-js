@@ -39,7 +39,7 @@ function calculateAverage(arr) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Exercise 064: Moyenne d\'un tableau', [

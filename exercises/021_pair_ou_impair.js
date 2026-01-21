@@ -38,4 +38,13 @@ function evenOrOdd(number) {
     }
 }
 
-console.log(evenOrOdd(54));
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 021: Pair ou impair', [
+        { input: 4, expected: 'pair', description: 'Even positive number' },
+        { input: 7, expected: 'impair', description: 'Odd positive number' },
+        { input: 0, expected: 'pair', description: 'Zero is even' },
+        { input: -2, expected: 'pair', description: 'Even negative number' }
+    ], evenOrOdd);
+}

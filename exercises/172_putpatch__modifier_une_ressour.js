@@ -112,6 +112,4 @@ const updateUserPATCH = async (id, partialData) => {
 // This exercise requires network access (fetch API with PUT/PATCH methods).
 // Please test manually by running the file or using an API testing tool.
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Network-dependent PUT/PATCH operations - test manually';
-}
+module.exports.NON_TESTABLE = 'Network-dependent PUT/PATCH operations - test manually';

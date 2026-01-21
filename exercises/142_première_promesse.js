@@ -78,7 +78,7 @@ if (typeof document === 'undefined' && typeof process !== 'undefined') {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.runAsync('Exercise 142: Première Promesse', [

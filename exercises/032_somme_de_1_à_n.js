@@ -35,7 +35,7 @@ function sumUpTo(n) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Exercise 032: Somme de 1 à N', [

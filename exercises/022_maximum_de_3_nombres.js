@@ -33,7 +33,7 @@ function max3(a, b, c) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Exercise 022: Maximum de 3 nombres', [

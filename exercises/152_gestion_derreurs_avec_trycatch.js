@@ -65,7 +65,7 @@ async function executerOperation(shouldSucceed) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.runAsync('Exercise 152: Gestion d\'erreurs', [

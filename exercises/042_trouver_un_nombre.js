@@ -54,7 +54,7 @@ console.log(`Trouvé en ${tentative} essais !`);
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Trouver un nombre', [

@@ -195,8 +195,6 @@ if (typeof document !== 'undefined') {
 // This exercise requires DOM interaction with buttons and display in a browser.
 // Please open: 122_calculatrice_interactive.html
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Interactive calculator - open 122_calculatrice_interactive.html in browser';
-}
+module.exports.NON_TESTABLE = 'Interactive calculator - open 122_calculatrice_interactive.html in browser';
 
 // Your code here

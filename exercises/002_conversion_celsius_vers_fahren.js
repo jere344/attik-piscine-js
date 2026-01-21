@@ -32,7 +32,7 @@ function celsiusToFahrenheit(celsius) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Exercise 002: Celsius to Fahrenheit', [

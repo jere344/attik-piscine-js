@@ -152,6 +152,4 @@ if (typeof document !== 'undefined') {
 // This exercise requires DOM interaction and cannot be tested automatically.
 // Please open: 132_quiz_interactif.html
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Interactive quiz - open 132_quiz_interactif.html in browser';
-}
+module.exports.NON_TESTABLE = 'Interactive quiz - open 132_quiz_interactif.html in browser';

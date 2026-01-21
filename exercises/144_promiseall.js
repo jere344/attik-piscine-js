@@ -128,6 +128,4 @@ if (typeof document === 'undefined' && typeof module !== 'undefined') {
 // This exercise demonstrates Promise.all(), Promise.race(), and Promise.allSettled().
 // Run the file to see the examples: node 144_promiseall.js
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Promise demonstration - run node 144_promiseall.js to see examples';
-}
+module.exports.NON_TESTABLE = 'Promise demonstration - run node 144_promiseall.js to see examples';

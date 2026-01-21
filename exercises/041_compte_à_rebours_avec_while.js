@@ -37,3 +37,5 @@ while (count >= 0) {
     count--;
 }
 console.log('Décollage !');
+
+module.exports.NON_TESTABLE = 'Console output only, no return value';

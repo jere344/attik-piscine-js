@@ -35,7 +35,7 @@ function parcourirTableau(tableau) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Parcourir un tableau', [

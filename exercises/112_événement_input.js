@@ -80,6 +80,4 @@ if (typeof document !== 'undefined') {
 // This exercise requires DOM interaction and input events in a browser.
 // Please open: 112_événement_input.html
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Input events - open 112_événement_input.html in browser';
-}
+module.exports.NON_TESTABLE = 'Input events - open 112_événement_input.html in browser';

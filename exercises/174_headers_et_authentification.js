@@ -151,6 +151,4 @@ class ApiClient {
 // This exercise requires network access and authentication tokens.
 // Please test manually with a real API that supports authentication.
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Network-dependent with authentication - test manually';
-}
+module.exports.NON_TESTABLE = 'Network-dependent with authentication - test manually';

@@ -39,7 +39,7 @@ function creerPhrase(nom, age, ville) {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.run('Exercise 072: Template literals', [

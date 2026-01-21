@@ -61,7 +61,7 @@ const recupererPlusieursUtilisateurs = async (ids) => {
 
 // ==================== TESTS ====================
 
-if (typeof module !== 'undefined' && module.exports) {
+if (require.main === module) {
     const test = require('../test-framework');
     
     test.runAsync('Exercise 162: Récupérer un seul élément', [

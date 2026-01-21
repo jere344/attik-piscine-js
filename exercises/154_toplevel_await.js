@@ -60,6 +60,4 @@ console.log('Données chargées:', data);
 // This exercise requires ES module setup (type: "module") which conflicts with CommonJS test framework.
 // Please test manually by running as an ES module.
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Requires ES module setup - test manually with Node.js --experimental-modules or browser';
-}
+module.exports.NON_TESTABLE = 'Requires ES module setup - test manually with Node.js --experimental-modules or browser';

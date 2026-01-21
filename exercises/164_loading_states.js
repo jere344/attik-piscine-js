@@ -122,6 +122,4 @@ class DataLoader {
 // This exercise requires network access (fetch API) and uses loading states.
 // Please test manually by running the file and observing the state transitions.
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'Network-dependent with async state management - test manually';
-}
+module.exports.NON_TESTABLE = 'Network-dependent with async state management - test manually';

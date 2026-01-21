@@ -100,6 +100,4 @@ if (typeof document !== 'undefined') {
 // This exercise requires DOM interaction in a browser.
 // Please open: 092_modifier_le_contenu_du_dom.html
 
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports.NON_TESTABLE = 'DOM manipulation - open 092_modifier_le_contenu_du_dom.html in browser';
-}
+module.exports.NON_TESTABLE = 'DOM manipulation - open 092_modifier_le_contenu_du_dom.html in browser';
