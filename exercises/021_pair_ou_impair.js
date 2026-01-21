@@ -29,3 +29,13 @@
 // TODO: Write your solution below
 
 // Your code here
+
+function evenOrOdd(number) {
+    if (number % 2 === 0) {
+        return "pair";
+    } else {
+        return "impair";
+    }
+}
+
+console.log(evenOrOdd(3));
