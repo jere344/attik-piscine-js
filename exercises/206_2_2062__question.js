@@ -19,6 +19,21 @@
 
 // ==================== SOLUTION ====================
 
-// TODO: Write your solution below
+function mergeIntervals(interval1, interval2) {
+    return {
+        start: Math.min(interval1.start, interval2.start),
+        end: Math.max(interval1.end, interval2.end)
+    };
+}
 
-// Your code here
+// ==================== TESTS ====================
+
+if (require.main === module) {
+    const test = require('../test-framework');
+    
+    test.run('Exercise 206.2: Merge Intervals', [
+        { input: [{start: 1, end: 5}, {start: 3, end: 8}], expected: {start: 1, end: 8}, description: 'mergeIntervals({1,5}, {3,8})' },
+        { input: [{start: 10, end: 15}, {start: 5, end: 12}], expected: {start: 5, end: 15}, description: 'mergeIntervals({10,15}, {5,12})' },
+        { input: [{start: 0, end: 3}, {start: 7, end: 10}], expected: {start: 0, end: 10}, description: 'mergeIntervals({0,3}, {7,10})' }
+    ], mergeIntervals);
+}
